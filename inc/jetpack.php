@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.me/
  *
- * @package KnR-WP-Theme
+ * @package KnR
  */
 
 /**

@@ -4,7 +4,7 @@
  *
  * @link http://codex.wordpress.org/Custom_Headers
  *
- * @package KnR-WP-Theme
+ * @package KnR
  */
 
 /**

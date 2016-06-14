@@ -1,10 +1,10 @@
 <?php
 /**
- * KnR-WP-Theme functions and definitions.
+ * KnR functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package KnR-WP-Theme
+ * @package KnR
  */
 
 if ( ! function_exists( 'knr_setup' ) ) :
@@ -19,7 +19,7 @@ function knr_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on KnR-WP-Theme, use a find and replace
+	 * If you're building a theme based on KnR, use a find and replace
 	 * to change 'knr' to the name of your theme in all the template files.
 	 */
 	load_theme_textdomain( 'knr', get_template_directory() . '/languages' );
@@ -480,11 +480,11 @@ add_action( 'widgets_init', 'knr_widgets_init' );
 
 if ( ! function_exists( 'knr_fonts_url' ) ) :
 	/**
-	 * Register Google fonts for KnR-WP-Theme.
+	 * Register Google fonts for KnR.
 	 *
 	 * Create your own knr_fonts_url() function to override in a child theme.
 	 *
-	 * @since KnR-WP-Theme 1.0
+	 * @since KnR 1.0
 	 *
 	 * @return string Google fonts URL for the theme. 
 	 */

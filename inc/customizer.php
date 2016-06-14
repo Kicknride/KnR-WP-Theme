@@ -1,8 +1,8 @@
 <?php
 /**
- * KnR-WP-Theme Theme Customizer.
+ * knr Theme Customizer.
  *
- * @package KnR-WP-Theme
+ * @package knr
  */
 
 /**
@@ -26,8 +26,8 @@ function knr_customizer_register( $wp_customize )
 
       $wp_customize->add_panel( 'theme_option', array(
         'priority' => 150,
-        'title' => __( 'KnR-WP-Theme Theme Option', 'knr' ),
-        'description' => __( 'Welcome to KnR-WP-Theme Theme Option.', 'knr' ),
+        'title' => __( 'KnR Theme Option', 'knr' ),
+        'description' => __( 'Welcome to KnR Theme Option.', 'knr' ),
       ));
 
       /**********************************************/
@@ -589,7 +589,7 @@ function knr_customizer_register( $wp_customize )
      
       $wp_customize->add_panel( 'layout', array(
         'priority' => 160,
-        'title' => __( 'KnR-WP-Theme Sidebar Layout', 'knr' ),
+        'title' => __( 'knr Sidebar Layout', 'knr' ),
         'description' => __( 'Theme Sidebar Layout', 'knr' ),
       ));
 
@@ -710,10 +710,10 @@ function knr_customizer_register( $wp_customize )
       ));
 
       /**********************************************/
-      /******** About KnR-WP-Theme *********/
+      /******** About knr *********/
       /**********************************************/    
   $wp_customize->add_section('knr_about_section', array(    
-    'title'       => __('About KnR-WP-Theme Theme', 'knr'),
+    'title'       => __('About knr Theme', 'knr'),
     'priority' => 400,    
   ));
 
@@ -786,7 +786,7 @@ function knr_customizer_js() {
     wp_enqueue_script('knr-customizer', get_template_directory_uri() . '/js/knr-customizer.js', array('jquery'), '1.3.0', true);
 
     wp_localize_script( 'knr-customizer', 'knr_customizer_js_obj', array(
-        'pro' => __('Upgrade To KnR-WP-Theme Plus','knr')
+        'pro' => __('Upgrade To knr Plus','knr')
     ) );
     wp_enqueue_style( 'knr-customizer', get_template_directory_uri() . '/css/knr-customizer.css');
 }

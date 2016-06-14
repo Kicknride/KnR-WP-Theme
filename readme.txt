@@ -2,7 +2,7 @@
  						***** KNR-WP-THEME THEME DOCUMENTATION *****
 ================================================================================================
 
-Description: KnR-WP-Theme is a multipurpose Free WordPress Theme. It consists of Featured Slider, Featured Posts, Services Posts, Testimonial Posts, Latest Posts, your Works Posts, Newsletter Subscription Widget, Social Icons and four widgetized Footer blocks in Homepage layout. You can choose multiple sidebar option on blog, single post, single page, search page, page not found page as Left Sidebar, Right Sidebar and Both Sidebar as per requirements. These all options can be optimized from the Theme Options of Customize. RTL Enable/Disable option is also available in Theme Options. Fullwidth Page, Fullwidth Blog with Masonry layout and Woocommerce Ready within the theme. What are you waiting for? Lets start downloading this amazing and beautiful Free Multipurpose WordPress Theme right away. Read the theme documentation for detail usage of theme attached within this theme as readme.txt file or visit this theme demo link site. Theme Documentation : http://oceanwebthemes.com/themes/flatter
+Description: KnR is a multipurpose Free WordPress Theme. It consists of Featured Slider, Featured Posts, Services Posts, Testimonial Posts, Latest Posts, your Works Posts, Newsletter Subscription Widget, Social Icons and four widgetized Footer blocks in Homepage layout. You can choose multiple sidebar option on blog, single post, single page, search page, page not found page as Left Sidebar, Right Sidebar and Both Sidebar as per requirements. These all options can be optimized from the Theme Options of Customize. RTL Enable/Disable option is also available in Theme Options. Fullwidth Page, Fullwidth Blog with Masonry layout and Woocommerce Ready within the theme. What are you waiting for? Lets start downloading this amazing and beautiful Free Multipurpose WordPress Theme right away. Read the theme documentation for detail usage of theme attached within this theme as readme.txt file or visit this theme demo link site. Theme Documentation : http://oceanwebthemes.com/themes/flatter
 
 Tags: translation-ready, custom-background, green,light,theme-options, custom-menu, post-formats, threaded-comments,one-column,two-columns,three-columns,left-sidebar,right-sidebar,responsive-layout,custom-header,featured-images,full-width-template,rtl-language-support,sticky-post
 
@@ -14,7 +14,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 
-KnR-WP-Theme is distributed under the terms of the GNU General Public License v2
+KnR is distributed under the terms of the GNU General Public License v2
 The exceptions to license are as follows:
 Based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 Javascript Library : http://owlgraphic.com/owlcarousel/
@@ -46,7 +46,7 @@ Image licences Used in screenshot
 
 == RECOMMENDED PLUGINS ==
 	
-KnR-WP-Theme Theme support styling of  the following plugins from the WordPress Repository.
+KnR Theme support styling of  the following plugins from the WordPress Repository.
 
 1. Woocommerce Plugin [ if you want to display your site with products to sell online ]
 2. Newsletter Plugin
@@ -54,15 +54,15 @@ KnR-WP-Theme Theme support styling of  the following plugins from the WordPress 
 
 
 == KNR-WP-THEME THEME HOMEPAGE ==
-By default, WordPress site will takes you to Blog as your Homepage but in order to get the KnR-WP-Theme Theme Homepage, you have to go to Pages > Add New page. Here you can add title as Home and select the template as Frontpage. Then Save the page, assign that page to frontpage via settings and all done...!!!
+By default, WordPress site will takes you to Blog as your Homepage but in order to get the KnR Theme Homepage, you have to go to Pages > Add New page. Here you can add title as Home and select the template as Frontpage. Then Save the page, assign that page to frontpage via settings and all done...!!!
 
 
 == KNR-WP-THEME THEME OPTION PANEL ==
 	
 Go to Appearance > Customize.
-Click on KnR-WP-Theme Theme Option where you will get the following sections for the homepage to set.
+Click on KnR Theme Option where you will get the following sections for the homepage to set.
 
-*** KnR-WP-Theme Theme Option ***
+*** KnR Theme Option ***
 
 1. Theme Logo:
 You can replace the default theme logo with your own logo by uploading. Uploaded image size must be 200px width and 52px height for the logo.
@@ -96,9 +96,9 @@ Create a page called home or frontpage and select the , Select the FrontPage Tem
 
 
 
-*** KnR-WP-Theme Sidebar Layout ***
+*** KnR Sidebar Layout ***
 
-After successfully optimizing your site requirements from KnR-WP-Theme Theme Option, now you can choose your site sidebar layout option for Blog, Single page, Post page, Search page and Page not found page accordingly.
+After successfully optimizing your site requirements from KnR Theme Option, now you can choose your site sidebar layout option for Blog, Single page, Post page, Search page and Page not found page accordingly.
 
 Available Sidebars:
 Category Sidebar Layout 		: Left Sidebar, Right Sidebar and Both Sidebar (displays left, content and right sidebars)

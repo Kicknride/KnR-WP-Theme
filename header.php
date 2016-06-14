@@ -1,12 +1,12 @@
 <?php
 /**
- * The header for KnR-WP-Theme theme.
+ * The header for KnR theme.
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package KnR-WP-Theme
+ * @package KnR
  */
 
 ?><!DOCTYPE html>

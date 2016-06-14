@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: KnR-WP-Theme 1.1.4\n"
+"Project-Id-Version: KnR 1.1.4\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/knr\n"
 "POT-Creation-Date: 2016-02-08 21:51:31+0000\n"
 "MIME-Version: 1.0\n"
@@ -264,7 +264,7 @@ msgid "Oceanweb Themes"
 msgstr ""
 
 #: inc/extras.php:86
-msgid "KnR-WP-ThemePlus Preview:"
+msgid "KnRPlus Preview:"
 msgstr ""
 
 #: inc/extras.php:87
@@ -272,7 +272,7 @@ msgid "View Demo"
 msgstr ""
 
 #: inc/extras.php:92
-msgid "About KnR-WP-ThemePlus:"
+msgid "About KnRPlus:"
 msgstr ""
 
 #: inc/extras.php:93
@@ -308,11 +308,11 @@ msgid "Leave a comment"
 msgstr ""
 
 #: inc/customizer.php:29
-msgid "KnR-WP-Theme Theme Option"
+msgid "KnR Theme Option"
 msgstr ""
 
 #: inc/customizer.php:30
-msgid "Welcome to KnR-WP-Theme Theme Option."
+msgid "Welcome to KnR Theme Option."
 msgstr ""
 
 #: inc/customizer.php:39
@@ -477,7 +477,7 @@ msgstr ""
 
 
 #: inc/customizer.php:595
-msgid "KnR-WP-Theme Sidebar Layout"
+msgid "KnR Sidebar Layout"
 msgstr ""
 
 #: inc/customizer.php:596
@@ -525,7 +525,7 @@ msgid "Page Not Found Sidebar position"
 msgstr ""
 
 #. Theme Name of the theme
-msgid "KnR-WP-Theme"
+msgid "KnR"
 msgstr ""
 
 #. Theme URI of the theme
@@ -534,13 +534,13 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"KnR-WP-Theme is a multipurpose Free WordPress Theme."
+"KnR is a multipurpose Free WordPress Theme."
 "It consists of Featured Slider, Featured Posts, Services Posts, Testimonial Posts, Latest Posts, your Works Posts, Newsletter Subscription Widget, Social Icons and four widgetized Footer blocks in Homepage layout."
 "You can choose multiple sidebar option on blog, single post, single page, search page, page not found page as Left Sidebar, Right Sidebar and Both Sidebar as per requirements. These all options can be optimized from the Theme Options of Customize."
 Fullwidth Page, Fullwidth Blog with Masonry layout and Woocommerce Ready within the theme."
 "What are you waiting for? Lets start downloading this amazing and beautiful Free Multipurpose WordPress Theme right away."
 "Read the theme documentation for detail usage of theme attached within this theme as readme.txt file."
-"or view the demo of KnR-WP-Theme Plus http://www.oceanwebthemes.com/pro/knrplus/"
+"or view the demo of KnR Plus http://www.oceanwebthemes.com/pro/knrplus/"
 
 msgstr ""
 

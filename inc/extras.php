@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package KnR-WP-Theme
+ * @package KnR
  */
 
 /**
@@ -83,13 +83,13 @@ if (class_exists('WP_Customize_Control') && ! class_exists( 'about_knr_theme' ) 
                         ),
 
                         'demo' => array(
-                            'label' => __('KnR-WP-ThemePlus Preview: ', 'knr'),                           
+                            'label' => __('KnRPlus Preview: ', 'knr'),                           
                             'text' => __('View Demo', 'knr'),
                             'link' => esc_url('http://www.oceanwebthemes.com/pro/knrplus/'),
                         ),
 
                         'plus' => array(
-                            'label' => __('About KnR-WP-ThemePlus: ', 'knr'),                      
+                            'label' => __('About KnRPlus: ', 'knr'),                      
                             'text' => __('CLick Here', 'knr'),
                             'link' => esc_url('http://oceanwebthemes.com/webthemes/knr-plus-premium-wordpress-theme/'),
                         ),

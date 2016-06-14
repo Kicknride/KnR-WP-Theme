@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package KnR-WP-Theme
+ * @package KnR
  */
 
 get_header(); ?>
