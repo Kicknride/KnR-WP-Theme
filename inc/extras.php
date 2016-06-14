@@ -78,10 +78,10 @@ if (class_exists('WP_Customize_Control') && ! class_exists( 'about_knr_theme' ) 
          $about_knr_theme = array(
                         'developed' => array(
                             'label' => __('Developed By: ', 'knr'),                         
-                            'text' => __('Oceanweb Themes', 'knr'),
-                            'link' => esc_url('http://oceanwebthemes.com/'),
+                            'text' => __('Kick\'n Ride Themes', 'knr'),
+                            'link' => esc_url('https://kicknride.fr/'),
                         ),
-
+/*
                         'demo' => array(
                             'label' => __('KnRPlus Preview: ', 'knr'),                           
                             'text' => __('View Demo', 'knr'),
@@ -93,7 +93,8 @@ if (class_exists('WP_Customize_Control') && ! class_exists( 'about_knr_theme' ) 
                             'text' => __('CLick Here', 'knr'),
                             'link' => esc_url('http://oceanwebthemes.com/webthemes/knr-plus-premium-wordpress-theme/'),
                         ),
-                            'rate' => array(
+ */
+                        'rate' => array(
                             'label' => __('Rate Theme: ', 'knr'),                            
                             'text' => __('Click Here', 'knr'),
                             'link' => esc_url('https://wordpress.org/support/view/theme-reviews/knr'),

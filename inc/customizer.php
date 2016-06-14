@@ -779,19 +779,6 @@ function knr_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'knr_customize_preview_js' );
 
-/**
- * Enqueue scripts for customizer
- */
-function knr_customizer_js() {
-    wp_enqueue_script('knr-customizer', get_template_directory_uri() . '/js/knr-customizer.js', array('jquery'), '1.3.0', true);
-
-    wp_localize_script( 'knr-customizer', 'knr_customizer_js_obj', array(
-        'pro' => __('Upgrade To knr Plus','knr')
-    ) );
-    wp_enqueue_style( 'knr-customizer', get_template_directory_uri() . '/css/knr-customizer.css');
-}
-add_action( 'customize_controls_enqueue_scripts', 'knr_customizer_js' );
-
 function knr_sanitize_text( $input ) {
     return wp_kses_post( force_balance_tags( $input ) );
 }

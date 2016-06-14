@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package KnR
+ * @package KnR-WP-Theme
  */
 
 get_header(); ?>
@@ -62,7 +62,7 @@ get_header(); ?>
                     		<?php the_excerpt();?>
                     		<div class="buttons text-center">
                     		<?php if(get_theme_mod('slider_button')) { ?>
-                    			<span><a href="<?php echo esc_url(get_theme_mod( 'slider_button', 'http://oceanwebthemes.com' )); ?>" class="btn btn-slider" title=""><?php _e('Contact Us', 'knr'); ?></a></span>
+                    			<span><a href="<?php echo esc_url(get_theme_mod( 'slider_button', 'https://kicknride.fr' )); ?>" class="btn btn-slider" title=""><?php _e('Contact Us', 'knr'); ?></a></span>
                     		<?php }?>
                     			<span><a href="<?php the_permalink();?>" class="btn btn-slider" title=""><?php _e('Read More','knr'); ?></a></span>
                     		</div>
