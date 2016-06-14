@@ -1,11 +1,11 @@
 /**
  * Customizer Custom CSS
  */
-.flatter-ads {
+.knr-ads {
 	background-color: #27C2AA;
 	text-align: center;
 }
-.flatter-ads .button {
+.knr-ads .button {
 	background-color: #27C2AA;
     border: 1px solid #FFF;
     border-radius: 4px;
@@ -15,8 +15,8 @@
 	-webkit-transition:all 0.5s ease-in-out 0s;
 	-moz-transition:all 0.5s ease-in-out 0s;
 }
-.flatter-ads .button:hover,
-.flatter-ads .button:focus
+.knr-ads .button:hover,
+.knr-ads .button:focus
 {
 	background-color: #666666 ;
 	color: #ffffff;

@@ -5,7 +5,7 @@ if ( ! class_exists( 'WP_Customize_Control' ) )
 /**
  * Customize Control for Taxonomy Select
  */
-class flatter_Customize_Dropdown_Taxonomies_Control extends WP_Customize_Control {
+class knr_Customize_Dropdown_Taxonomies_Control extends WP_Customize_Control {
 
   public $type = 'dropdown-taxonomies';
 
@@ -14,15 +14,15 @@ class flatter_Customize_Dropdown_Taxonomies_Control extends WP_Customize_Control
 
   public function __construct( $manager, $id, $args = array() ) {
 
-    $flatter_taxonomy = 'category';
+    $knr_taxonomy = 'category';
     if ( isset( $args['taxonomy'] ) ) {
       $taxonomy_exist = taxonomy_exists( esc_attr( $args['taxonomy'] ) );
       if ( true === $taxonomy_exist ) {
         $our_taxonomy = esc_attr( $args['taxonomy'] );
       }
     }
-    $args['taxonomy'] = $flatter_taxonomy;
-    $this->taxonomy = esc_attr( $flatter_taxonomy );
+    $args['taxonomy'] = $knr_taxonomy;
+    $this->taxonomy = esc_attr( $knr_taxonomy );
 
     parent::__construct( $manager, $id, $args );
   }
@@ -40,7 +40,7 @@ class flatter_Customize_Dropdown_Taxonomies_Control extends WP_Customize_Control
       <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
          <select <?php echo $this->link(); ?>>
             <?php
-              printf('<option value="%s" %s>%s</option>', '', selected($this->value(), '', false),__('Select', 'flatter') );
+              printf('<option value="%s" %s>%s</option>', '', selected($this->value(), '', false),__('Select', 'knr') );
              ?>
             <?php if ( ! empty( $all_taxonomies ) ): ?>
               <?php foreach ( $all_taxonomies as $key => $tax ): ?>
@@ -57,6 +57,6 @@ class flatter_Customize_Dropdown_Taxonomies_Control extends WP_Customize_Control
 
 }
 
-class flatter_Select_Customize_Control extends WP_Customize_Control {
+class knr_Select_Customize_Control extends WP_Customize_Control {
   public $type = 'select';
 }

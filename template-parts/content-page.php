@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Flatter
+ * @package KnR-WP-Theme
  */
 
 ?>
@@ -31,7 +31,7 @@
         	
         	<?php
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'flatter' ),
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'knr' ),
 					'after'  => '</div>',
 				) );
 			?>
@@ -59,7 +59,7 @@
 				edit_post_link(
 					sprintf(
 						/* translators: %s: Name of current post */
-						esc_html__( 'Edit %s', 'flatter' ),
+						esc_html__( 'Edit %s', 'knr' ),
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					),
 					'<span class="edit-link">',

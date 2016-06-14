@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Flatter
+ * @package KnR-WP-Theme
  */
 
 get_header(); ?>
@@ -26,7 +26,7 @@ get_header(); ?>
 							the_title( '<h1 class="page-title">', '</h1>' );
 						?>
 	                    <div class="underline"></div>
-	                    <?php flatter_breadcrumbs(); ?>
+	                    <?php knr_breadcrumbs(); ?>
 	                </div>
 	            </div>
 	        </div>

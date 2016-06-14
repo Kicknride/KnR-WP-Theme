@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package Flatter
+ * @package KnR-WP-Theme
  */
 
 get_header(); ?>
@@ -14,9 +14,9 @@ get_header(); ?>
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="block">
-						<h1 class="page-title"><?php esc_html_e( '404 Not Found.', 'flatter' ); ?></h1>
+						<h1 class="page-title"><?php esc_html_e( '404 Not Found.', 'knr-wp-theme' ); ?></h1>
 						<div class="underline"></div>
-						<?php flatter_breadcrumbs(); ?>
+						<?php knr-wp-theme_breadcrumbs(); ?>
 					</div>
 				</div>
 			</div>
@@ -28,7 +28,7 @@ get_header(); ?>
 			<div class="row">
 				<?php
 				$class = 'col-md-6';
-				$sidebar =  get_theme_mod('page_not_found_sidebar_position',__('right','flatter'));
+				$sidebar =  get_theme_mod('page_not_found_sidebar_position',__('right','knr-wp-theme'));
 				if($sidebar != 'both'){
 					$class = 'col-md-9';
 				}
@@ -42,9 +42,9 @@ get_header(); ?>
 
 				<div class="<?php echo $class;?> detail-content">
 					<div class="not-found">
-						<h1><?php esc_html_e( '404', 'flatter' ); ?></h1>
-						<h3><?php esc_html_e( 'Oops, this page could not be found!', 'flatter' ); ?></h3>
-						<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe you can search', 'flatter' ); ?></p>
+						<h1><?php esc_html_e( '404', 'knr-wp-theme' ); ?></h1>
+						<h3><?php esc_html_e( 'Oops, this page could not be found!', 'knr-wp-theme' ); ?></h3>
+						<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe you can search', 'knr-wp-theme' ); ?></p>
 
 						<?php get_search_form(); ?>
 

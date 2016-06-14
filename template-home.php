@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Flatter
+ * @package KnR-WP-Theme
  */
 
 get_header(); ?>
@@ -28,8 +28,8 @@ get_header(); ?>
         	<?php
 				$cid = get_theme_mod('slider_category_display');
 				$category_link = get_category_link($cid);
-				$flatter_cat = get_category($cid);
-				if ($flatter_cat) {
+				$knr_cat = get_category($cid);
+				if ($knr_cat) {
         	?>
 
         	<?php
@@ -49,7 +49,7 @@ get_header(); ?>
             
             <div class="item">
             	<div class="overlay"></div>
-            	<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'flatter-slider-thumb' ); ?>
+            	<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'knr-slider-thumb' ); ?>
 				<div class="fill" style="background-image: url( <?php if ( has_post_thumbnail() ) {
 					echo $image[0]; } else { ?>
 				<?php echo esc_url( get_template_directory_uri());?>/images/slider1.jpg <?php } ?> )">
@@ -62,9 +62,9 @@ get_header(); ?>
                     		<?php the_excerpt();?>
                     		<div class="buttons text-center">
                     		<?php if(get_theme_mod('slider_button')) { ?>
-                    			<span><a href="<?php echo esc_url(get_theme_mod( 'slider_button', 'http://oceanwebthemes.com' )); ?>" class="btn btn-slider" title=""><?php _e('Contact Us', 'flatter'); ?></a></span>
+                    			<span><a href="<?php echo esc_url(get_theme_mod( 'slider_button', 'http://oceanwebthemes.com' )); ?>" class="btn btn-slider" title=""><?php _e('Contact Us', 'knr'); ?></a></span>
                     		<?php }?>
-                    			<span><a href="<?php the_permalink();?>" class="btn btn-slider" title=""><?php _e('Read More','flatter'); ?></a></span>
+                    			<span><a href="<?php the_permalink();?>" class="btn btn-slider" title=""><?php _e('Read More','knr'); ?></a></span>
                     		</div>
                     	</div>
                     </div>
@@ -96,8 +96,8 @@ get_header(); ?>
 	        	<?php
 					$cid = get_theme_mod('features_category_display');
 					$category_link = get_category_link($cid);
-					$flatter_cat = get_category($cid);
-					if ($flatter_cat) {
+					$knr_cat = get_category($cid);
+					if ($knr_cat) {
 	        	?>
 
 	        	<?php
@@ -120,7 +120,7 @@ get_header(); ?>
 			                  	array(
 			                      'class' => 'img-responsive center-block'
 			                		);
-			                	the_post_thumbnail('flatter-features-thumb',$arg);
+			                	the_post_thumbnail('knr-features-thumb',$arg);
 			              	  } 
 			                ?>
 	                    </div>
@@ -157,7 +157,7 @@ get_header(); ?>
 	        <div class="row">
 	            <div class="col-sm-12">
 	                <div class="section-title">
-	                    <h3><?php echo esc_attr(get_theme_mod( 'services_title', 'Our Service','flatter' )); ?></h3>
+	                    <h3><?php echo esc_attr(get_theme_mod( 'services_title', 'Our Service','knr' )); ?></h3>
 	                    <div class="underline"></div>
 	                </div>
 	            </div>
@@ -165,8 +165,8 @@ get_header(); ?>
 	            <?php
 					$cid = get_theme_mod('services_category_display');
 					$category_link = get_category_link($cid);
-					$flatter_cat = get_category($cid);
-					if ($flatter_cat) {
+					$knr_cat = get_category($cid);
+					if ($knr_cat) {
 	        	?>
 
 	        	<?php
@@ -188,13 +188,13 @@ get_header(); ?>
 			                  	array(
 			                      'class' => 'img-responsive center-block'
 			                		);
-			                the_post_thumbnail('flatter-services-thumb',$arg);
+			                the_post_thumbnail('knr-services-thumb',$arg);
 			              	} 
 			            ?>
 	                    <div class="content">
 	                        <h3 class="block-title"><?php the_title();?></h3>
 							<?php the_excerpt();?>
-	                        <a href="<?php the_permalink();?>" class="btn read-more" title=""><?php _e('Read More','flatter'); ?></a>
+	                        <a href="<?php the_permalink();?>" class="btn read-more" title=""><?php _e('Read More','knr'); ?></a>
 	                    </div>
 	                </div>
 	            </div>
@@ -226,7 +226,7 @@ get_header(); ?>
 	        <div class="row">
 	            <div class="col-sm-12">
 	                <div class="section-title">
-	                    <h3><?php echo esc_attr(get_theme_mod( 'testimonial_title', __('Testimonials', 'flatter' ))); ?></h3>
+	                    <h3><?php echo esc_attr(get_theme_mod( 'testimonial_title', __('Testimonials', 'knr' ))); ?></h3>
 	                    <div class="underline"></div>
 	                </div>
 	            </div>
@@ -236,8 +236,8 @@ get_header(); ?>
                 		<?php
 							$cid = get_theme_mod('testimonial_category_display');
 							$category_link = get_category_link($cid);
-							$flatter_cat = get_category($cid);
-							if ($flatter_cat) {
+							$knr_cat = get_category($cid);
+							if ($knr_cat) {
 			        	?>
 
 			        	<?php
@@ -290,7 +290,7 @@ get_header(); ?>
 	        <div class="row">
 	            <div class="col-sm-12">
 	                <div class="section-title">
-	                    <h3><?php echo esc_attr(get_theme_mod( 'latestpost_title', __('Latest Post','flatter' ))); ?></h3>
+	                    <h3><?php echo esc_attr(get_theme_mod( 'latestpost_title', __('Latest Post','knr' ))); ?></h3>
 	                    <div class="underline"></div>
 	                </div>
 	            </div>
@@ -298,8 +298,8 @@ get_header(); ?>
 	            <?php
 					$cid = get_theme_mod('latestpost_category_display');
 					$category_link = get_category_link($cid);
-					$flatter_cat = get_category($cid);
-					if ($flatter_cat) {
+					$knr_cat = get_category($cid);
+					if ($knr_cat) {
 	        	?>
 
 	        	<?php
@@ -322,7 +322,7 @@ get_header(); ?>
 				                  	array(
 				                      'class' => 'img-responsive center-block'
 				                		);
-				                the_post_thumbnail('flatter-lpost-thumb',$arg);
+				                the_post_thumbnail('knr-lpost-thumb',$arg);
 				              	} 
 				            ?>
 			            </div>
@@ -334,7 +334,7 @@ get_header(); ?>
 
 	                        <h3 class="block-title"><?php the_title();?></h3>
 							<?php the_excerpt();?>
-	                        <a href="<?php the_permalink();?>" class="btn read-more" title=""><?php _e('Read More', 'flatter');?></a>
+	                        <a href="<?php the_permalink();?>" class="btn read-more" title=""><?php _e('Read More', 'knr');?></a>
 	                    </div>
 	                </div>
 	            </div>
@@ -365,7 +365,7 @@ get_header(); ?>
 	        <div class="row">
 	            <div class="col-sm-12">
 	                <div class="section-title">
-	                    <h3><?php echo esc_attr(get_theme_mod( 'ourworks_title', __('Our Works', 'flatter' ))); ?></h3>
+	                    <h3><?php echo esc_attr(get_theme_mod( 'ourworks_title', __('Our Works', 'knr' ))); ?></h3>
 	                    <div class="underline"></div>
 	                </div>
 	            </div>
@@ -373,8 +373,8 @@ get_header(); ?>
 	            <?php
 					$cid = get_theme_mod('ourworks_category_display');
 					$category_link = get_category_link($cid);
-					$flatter_cat = get_category($cid);
-					if ($flatter_cat) {
+					$knr_cat = get_category($cid);
+					if ($knr_cat) {
 	        	?>
 
 	        	<?php
@@ -395,7 +395,7 @@ get_header(); ?>
 		                  	array(
 		                      'class' => 'img-responsive center-block'
 		                		);
-		                the_post_thumbnail('flatter-works-thumb',$arg);
+		                the_post_thumbnail('knr-works-thumb',$arg);
 		              	} 
 		            ?>
 	                <div class="on-hover">
@@ -405,7 +405,7 @@ get_header(); ?>
 		                            <h3 class="category"><?php the_title();?></h3>
 		                            <div class="underline"></div>
 									<?php the_excerpt();?>
-		                            <a href="<?php the_permalink();?>" title="" class="btn read-more"><?php _e('Read More', 'flatter');?></a>
+		                            <a href="<?php the_permalink();?>" title="" class="btn read-more"><?php _e('Read More', 'knr');?></a>
 		                        </div>
 		                    </div>
 		                </div>

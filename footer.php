@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Flatter
+ * @package KnR-WP-Theme
  */
 
 ?>
@@ -49,15 +49,15 @@
             <div class="row">
                 <div class="col-sm-3">
                     <h6>
-                        <?php echo esc_attr(get_theme_mod( 'copyright_textbox', __( '&copy; 2016. FLATTER. All Rights Reserved.', 'flatter' ) ) ); ?>
+                        <?php echo esc_attr(get_theme_mod( 'copyright_textbox', __( '&copy; 2016. KNR-WP-THEME. All Rights Reserved.', 'knr' ) ) ); ?>
                         
                     </h6>
                 </div>
                 <div class="col-sm-6">
                     <h6>
-                    <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'flatter' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'flatter' ), 'WordPress' ); ?></a>
+                    <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'knr' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'knr' ), 'WordPress' ); ?></a>
                         <span class="sep"> | </span>
-                        <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'flatter' ), 'flatter', '<a href="'.esc_url( __( 'http://oceanwebthemes.com', 'flatter' ) ).'" >Ocean Web Themes</a>' ); ?>
+                        <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'knr' ), 'knr', '<a href="'.esc_url( __( 'https://www.kicknride.fr', 'knr' ) ).'" >Ocean Web Themes</a>' ); ?>
                     </h6>
                 </div>
 

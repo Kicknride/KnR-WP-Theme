@@ -1,12 +1,12 @@
 <?php
 /**
- * The header for Flatter theme.
+ * The header for KnR-WP-Theme theme.
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Flatter
+ * @package KnR-WP-Theme
  */
 
 ?><!DOCTYPE html>
@@ -43,7 +43,7 @@
   					<div class="navbar navbar-default" role="navigation">
 				        <div class="navbar-header">
 				          	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				            	<span class="sr-only"><?php _e('Toggle navigation','flatter'); ?></span>
+				            	<span class="sr-only"><?php _e('Toggle navigation','knr'); ?></span>
 				            	<span class="icon-bar"></span>
 				            	<span class="icon-bar"></span>
 				            	<span class="icon-bar"></span>

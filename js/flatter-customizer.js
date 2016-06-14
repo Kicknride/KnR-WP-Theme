@@ -3,5 +3,5 @@
  */
 
 jQuery(document).ready(function() {
-   jQuery('.wp-full-overlay-sidebar-content').prepend('<div class="flatter-ads"> <a href="http://oceanwebthemes.com/webthemes/flatter-plus-premium-wordpress-theme/" class="button" target="_blank">{pro}</a></div>'.replace('{pro}',flatter_customizer_js_obj.pro));
+   jQuery('.wp-full-overlay-sidebar-content').prepend('<div class="knr-ads"> <a href="http://oceanwebthemes.com/webthemes/knr-plus-premium-wordpress-theme/" class="button" target="_blank">{pro}</a></div>'.replace('{pro}',knr_customizer_js_obj.pro));
 });

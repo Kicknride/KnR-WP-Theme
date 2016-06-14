@@ -4,37 +4,37 @@
  *
  * @link http://codex.wordpress.org/Custom_Headers
  *
- * @package Flatter
+ * @package KnR-WP-Theme
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses flatter_header_style()
- * @uses flatter_admin_header_style()
- * @uses flatter_admin_header_image()
+ * @uses knr_header_style()
+ * @uses knr_admin_header_style()
+ * @uses knr_admin_header_image()
  */
-function flatter_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'flatter_custom_header_args', array(
+function knr_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'knr_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => 'FFFFFF',
 		'width'                  => 1920,
 		'height'                 => 350,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'flatter_header_style',
-		'admin-head-callback'    => 'flatter_admin_header_style',
-		'admin-preview-callback' => 'flatter_admin_header_image',
+		'wp-head-callback'       => 'knr_header_style',
+		'admin-head-callback'    => 'knr_admin_header_style',
+		'admin-preview-callback' => 'knr_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'flatter_custom_header_setup' );
+add_action( 'after_setup_theme', 'knr_custom_header_setup' );
 
-if ( ! function_exists( 'flatter_header_style' ) ) :
+if ( ! function_exists( 'knr_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see flatter_custom_header_setup().
+ * @see knr_custom_header_setup().
  */
-function flatter_header_style() {
+function knr_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -48,30 +48,30 @@ function flatter_header_style() {
 
 	<?php
 }
-endif; // flatter_header_style
+endif; // knr_header_style
 
-if ( ! function_exists( 'flatter_admin_header_style' ) ) :
+if ( ! function_exists( 'knr_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see flatter_custom_header_setup().
+ * @see knr_custom_header_setup().
  */
-function flatter_admin_header_style() {
+function knr_admin_header_style() {
 ?>
 
 <?php
 }
-endif; // flatter_admin_header_style
+endif; // knr_admin_header_style
 
-if ( ! function_exists( 'flatter_admin_header_image' ) ) :
+if ( ! function_exists( 'knr_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see flatter_custom_header_setup().
+ * @see knr_custom_header_setup().
  */
-function flatter_admin_header_image() {
+function knr_admin_header_image() {
 ?>
 
 <?php
 }
-endif; // flatter_admin_header_image
+endif; // knr_admin_header_image
