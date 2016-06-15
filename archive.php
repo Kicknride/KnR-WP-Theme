@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Flatter
+ * @package KnR
  */
 get_header(); ?>
 	<section class="page-header" style="background:#404040 url( <?php if ( get_header_image() ) { header_image(); }  ?>)">	
@@ -17,7 +17,7 @@ get_header(); ?>
 							the_archive_description( '<div class="taxonomy-description">', '</div>' );
 						?>
 	                    <div class="underline"></div>
-	                    <?php flatter_breadcrumbs(); ?>
+	                    <?php knr_breadcrumbs(); ?>
 	                </div>
 	            </div>
 	        </div>
@@ -30,7 +30,7 @@ get_header(); ?>
 
         		<?php
 					$class = 'col-md-6 col-sm-8';
-					$sidebar =  get_theme_mod('sidebar_position',__('right','flatter') );
+					$sidebar =  get_theme_mod('sidebar_position',__('right','knr') );
 					 if($sidebar != 'both'){
 						 $class = 'col-md-9';
 					}
@@ -67,7 +67,7 @@ get_header(); ?>
 
 						<?php endif; ?>
 					</div>
-					<?php flatter_pagination_bars(); ?>
+					<?php knr_pagination_bars(); ?>
 				</div>
 
 				<?php

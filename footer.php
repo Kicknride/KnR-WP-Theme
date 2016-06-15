@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Flatter
+ * @package KnR-WP-Theme
  */
 
 ?>
@@ -49,15 +49,15 @@
             <div class="row">
                 <div class="col-sm-3">
                     <h6>
-                        <?php echo esc_attr(get_theme_mod( 'copyright_textbox', __( '&copy; 2016. FLATTER. All Rights Reserved.', 'flatter' ) ) ); ?>
+                        <?php echo esc_attr(get_theme_mod( 'copyright_textbox', __( '&copy; 2016. Kick\'n Ride. All Rights Reserved.', 'knr' ) ) ); ?>
                         
                     </h6>
                 </div>
                 <div class="col-sm-6">
                     <h6>
-                    <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'flatter' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'flatter' ), 'WordPress' ); ?></a>
+                    <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'knr' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'knr' ), 'WordPress' ); ?></a>
                         <span class="sep"> | </span>
-                        <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'flatter' ), 'flatter', '<a href="'.esc_url( __( 'http://oceanwebthemes.com', 'flatter' ) ).'" >Ocean Web Themes</a>' ); ?>
+                        <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'knr' ), 'knr', '<a href="'.esc_url( __( 'https://www.kicknride.fr', 'knr' ) ).'" >Kick\'n Ride</a>' ); ?>
                     </h6>
                 </div>
 
@@ -72,6 +72,8 @@
                             $googleplus = esc_url(get_theme_mod('googleplus_textbox'));
                             $youtube = esc_url(get_theme_mod('youtube_textbox'));
                             $linkedin = esc_url(get_theme_mod('linkedin_textbox'));
+                            $github = esc_url(get_theme_mod('github_textbox'));
+                            $instagram = esc_url(get_theme_mod('instagram_textbox'));
 
                             if($facebook){?>
                                 <li><a href="<?php echo $facebook;?>"><i class="fa fa-facebook"></i></a></li>
@@ -87,6 +89,12 @@
                             <?php }
                             if($linkedin){?>
                                 <li><a href="<?php echo $linkedin;?>"><i class="fa fa-linkedin"></i></a></li>
+                            <?php }
+                            if($github){?>
+                                <li><a href="<?php echo $github;?>"><i class="fa fa-github"></i></a></li>
+                            <?php }
+                            if($instagram){?>
+                                <li><a href="<?php echo $instagram;?>"><i class="fa fa-instagram"></i></a></li>
                             <?php }?>
                         </ul>
 

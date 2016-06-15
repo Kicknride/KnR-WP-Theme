@@ -1,13 +1,13 @@
 <?php
 /**
- * Flatter functions and definitions.
+ * KnR functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Flatter
+ * @package KnR
  */
 
-if ( ! function_exists( 'flatter_setup' ) ) :
+if ( ! function_exists( 'knr_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'flatter_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function flatter_setup() {
+function knr_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Flatter, use a find and replace
-	 * to change 'flatter' to the name of your theme in all the template files.
+	 * If you're building a theme based on KnR, use a find and replace
+	 * to change 'knr' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'flatter', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'knr', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -42,22 +42,22 @@ function flatter_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	add_image_size( 'flatter-slider-thumb', 1366, 768, true ); 			// Home Slider full Image
-	add_image_size( 'flatter-services-thumb', 770, 385, true ); 		// Home Services Thumbnail
-	add_image_size( 'flatter-works-thumb', 800, 600, true ); 			// Home Work Thumb
-	add_image_size( 'flatter-lpost-thumb', 800, 600, true ); 			// Home Latest Post Thumb	
-	add_image_size( 'flatter-single-full', 999999, 350, true ); 		// Single Page
+	add_image_size( 'knr-slider-thumb', 1366, 768, true ); 			// Home Slider full Image
+	add_image_size( 'knr-services-thumb', 770, 385, true ); 		// Home Services Thumbnail
+	add_image_size( 'knr-works-thumb', 800, 600, true ); 			// Home Work Thumb
+	add_image_size( 'knr-lpost-thumb', 800, 600, true ); 			// Home Latest Post Thumb	
+	add_image_size( 'knr-single-full', 999999, 350, true ); 		// Single Page
 
 
-	add_action( 'after_setup_theme', 'flatter_woocommerce_support' );
-		function flatter_woocommerce_support() {
+	add_action( 'after_setup_theme', 'knr_woocommerce_support' );
+		function knr_woocommerce_support() {
     	add_theme_support( 'woocommerce' );
 	} 
 
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'flatter' ),
+		'primary' => esc_html__( 'Primary Menu', 'knr' ),
 	) );
 
 	/*
@@ -85,15 +85,15 @@ function flatter_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'flatter_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'knr_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 
 
 }
-endif; // flatter_setup
-add_action( 'after_setup_theme', 'flatter_setup' );
+endif; // knr_setup
+add_action( 'after_setup_theme', 'knr_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -102,10 +102,10 @@ add_action( 'after_setup_theme', 'flatter_setup' );
  *
  * @global int $content_width
  */
-function flatter_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'flatter_content_width', 640 );
+function knr_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'knr_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'flatter_content_width', 0 );
+add_action( 'after_setup_theme', 'knr_content_width', 0 );
 
 add_theme_support( 'custom-logo', array(
 		'height'      => 35,
@@ -115,9 +115,9 @@ add_theme_support( 'custom-logo', array(
 	) );
 
 
-// =========================== FLATTER BREADCRUMBS ========================== //
-if ( ! function_exists( 'flatter_breadcrumbs' ) ) :
-function flatter_breadcrumbs() {
+// =========================== KNR-WP-THEME BREADCRUMBS ========================== //
+if ( ! function_exists( 'knr_breadcrumbs' ) ) :
+function knr_breadcrumbs() {
 	if(!is_home()) {
 		echo '<ul class="bc list-inline">';
 		echo '<li><a href="'.esc_url(home_url('/')).'">'.get_bloginfo('name').'</a></li>';
@@ -136,12 +136,12 @@ function flatter_breadcrumbs() {
 endif;
 
 
-// =========================== FLATTER PAGINATION BARS ========================== //
-if ( ! function_exists( 'flatter_pagination_bars' ) ) :
+// =========================== KNR-WP-THEME PAGINATION BARS ========================== //
+if ( ! function_exists( 'knr_pagination_bars' ) ) :
 	/**
 	 * Display navigation to next/previous set of posts when applicable.
 	 */
-	function flatter_pagination_bars() {
+	function knr_pagination_bars() {
 		// Don't print empty markup if there's only one page.
 		if ( $GLOBALS['wp_query']->max_num_pages < 1 ) {
 			return;
@@ -170,8 +170,8 @@ if ( ! function_exists( 'flatter_pagination_bars' ) ) :
 			'current'  => $paged,
 			'mid_size' => 2,
 			'add_args' => array_map( 'urlencode', $query_args ),
-			'prev_text' => __( '<span aria-hidden="true">&laquo;</span>', 'flatter' ),
-			'next_text' => __( '<span aria-hidden="true">&raquo;</span>', 'flatter' ),
+			'prev_text' => __( '<span aria-hidden="true">&laquo;</span>', 'knr' ),
+			'next_text' => __( '<span aria-hidden="true">&raquo;</span>', 'knr' ),
 	        'type'      => 'list',
 		) );
 
@@ -189,12 +189,12 @@ endif;
 
 
 
-// =========================== FLATTER POST NAVIGATION ========================== //
-if ( ! function_exists( 'flatter_post_nav' ) ) :
+// =========================== KNR-WP-THEME POST NAVIGATION ========================== //
+if ( ! function_exists( 'knr_post_nav' ) ) :
 	/**
 	 * Display navigation to next/previous post when applicable.
 	 */
-	function flatter_post_nav() {
+	function knr_post_nav() {
 		// Don't print empty markup if there's nowhere to navigate.
 		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
 		$next     = get_adjacent_post( false, '', false );
@@ -207,8 +207,8 @@ if ( ! function_exists( 'flatter_post_nav' ) ) :
 		<nav>
             <ul class="pager">                    
 			<?php
-				previous_post_link( '<li class="previous">%link</li>', _x( '<i class="fa fa-angle-left"></i> Previous', 'Previous post link', 'flatter' ) );
-				next_post_link(     '<li class="next">%link</li>',     _x( 'Next <i class="fa fa-angle-right"></i>', 'Next post link',     'flatter' ) );
+				previous_post_link( '<li class="previous">%link</li>', _x( '<i class="fa fa-angle-left"></i> Previous', 'Previous post link', 'knr' ) );
+				next_post_link(     '<li class="next">%link</li>',     _x( 'Next <i class="fa fa-angle-right"></i>', 'Next post link',     'knr' ) );
 			?>
 			</ul>
 		</nav><!-- .nav-links -->
@@ -219,23 +219,23 @@ endif;
 
 
 
-// =========================== FLATTER ENTRY META ========================== //
-if ( ! function_exists( 'flatter_entry_meta' ) ) :
-	function flatter_entry_meta() {
+// =========================== KNR-WP-THEME ENTRY META ========================== //
+if ( ! function_exists( 'knr_entry_meta' ) ) :
+	function knr_entry_meta() {
 		if ( is_sticky() && is_home() && ! is_paged() )
-			echo '<span class="featured-post">' . __( 'Sticky', 'flatter' ) . '</span>';
+			echo '<span class="featured-post">' . __( 'Sticky', 'knr' ) . '</span>';
 
 		if ( ! has_post_format( 'link' ) && 'post' == get_post_type() )
-			flatter_entry_meta();
+			knr_entry_meta();
 
 		// Translators: used between list items, there is a space after the comma.
-		$categories_list = get_the_category_list( __( ', ', 'flatter' ) );
+		$categories_list = get_the_category_list( __( ', ', 'knr' ) );
 		if ( $categories_list ) {
 			echo '<span class="categories-links">' . $categories_list . '</span>';
 		}
 
 		// Translators: used between list items, there is a space after the comma.
-		$tag_list = get_the_tag_list( '', __( ', ', 'flatter' ) );
+		$tag_list = get_the_tag_list( '', __( ', ', 'knr' ) );
 		if ( $tag_list ) {
 			echo '<span class="tags-links">' . $tag_list . '</span>';
 		}
@@ -244,7 +244,7 @@ if ( ! function_exists( 'flatter_entry_meta' ) ) :
 		if ( 'post' == get_post_type() ) {
 			printf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-				esc_attr( sprintf( __( 'View all posts by %s', 'flatter' ), get_the_author() ) ),
+				esc_attr( sprintf( __( 'View all posts by %s', 'knr' ), get_the_author() ) ),
 				get_the_author()
 			);
 		}
@@ -255,9 +255,9 @@ endif;
 
 
 
-// =========================== FLATTER GET LINK URL ========================== //
-if ( ! function_exists( 'flatter_get_link_url' ) ) :
-function flatter_get_link_url() {
+// =========================== KNR-WP-THEME GET LINK URL ========================== //
+if ( ! function_exists( 'knr_get_link_url' ) ) :
+function knr_get_link_url() {
 	$content = get_the_content();
 	$has_url = get_url_in_content( $content );
 
@@ -269,9 +269,9 @@ endif;
 
 
 
-// ====================== FLATTER TAG CLOUDS ARGUMENTS ========================== //
-add_filter( 'widget_tag_cloud_args', 'flatter_tag_cloud_args' );
-function flatter_tag_cloud_args( $args ) {
+// ====================== KNR-WP-THEME TAG CLOUDS ARGUMENTS ========================== //
+add_filter( 'widget_tag_cloud_args', 'knr_tag_cloud_args' );
+function knr_tag_cloud_args( $args ) {
 	$args['number'] = 14; // Your extra arguments go here
 	$args['largest'] = 14;
 	$args['smallest'] = 14;
@@ -282,14 +282,14 @@ function flatter_tag_cloud_args( $args ) {
 
 //====================EXCERPT LENGTH =======================//
 
-function flatter_excerpt_length( $length ) {
+function knr_excerpt_length( $length ) {
 	return 20;
 }
-add_filter( 'excerpt_length', 'flatter_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'knr_excerpt_length', 999 );
 
 
-// ========================= FLATTER CUSTOM COMMENTS ========================== //
-function flatter_custom_comments( $comment, $args, $depth ) {
+// ========================= KNR-WP-THEME CUSTOM COMMENTS ========================== //
+function knr_custom_comments( $comment, $args, $depth ) {
     $GLOBALS['comment'] = $comment;
     switch( $comment->comment_type ) :
         case 'pingback' :
@@ -320,7 +320,7 @@ function flatter_custom_comments( $comment, $args, $depth ) {
             		<a href="" class="reply" title="">
             			<?php 
 				            comment_reply_link( array_merge( $args, array( 
-				            'reply_text' => __('Reply','flatter'),
+				            'reply_text' => __('Reply','knr'),
 				            'after' => ' <span></span>', 
 				            'depth' => $depth,
 				            'max_depth' => $args['max_depth'] 
@@ -340,8 +340,8 @@ function flatter_custom_comments( $comment, $args, $depth ) {
 
 
 
-// ======================= FLATTER POST THUMBNAIL CAPTION ====================== //
-function flatter_the_post_thumbnail_caption() {
+// ======================= KNR-WP-THEME POST THUMBNAIL CAPTION ====================== //
+function knr_the_post_thumbnail_caption() {
   global $post;
 
   $thumbnail_id    = get_post_thumbnail_id($post->ID);
@@ -358,23 +358,23 @@ function flatter_the_post_thumbnail_caption() {
 
 
 
-// ================ FLATTER EDITOR STYLES FOR GOOGLE FONTS ================== //
-function flatter_add_editor_styles() {
+// ================ KNR-WP-THEME EDITOR STYLES FOR GOOGLE FONTS ================== //
+function knr_add_editor_styles() {
 	$rep_lace=array("%2B", "%2C","%3A");
     $font_url = str_replace( $rep_lace, " ", "//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" );
     add_editor_style( $font_url );
 }
-add_action( 'after_setup_theme', 'flatter_add_editor_styles' );
+add_action( 'after_setup_theme', 'knr_add_editor_styles' );
 
 
 
 
 
 
-// ================ FLATTER WOO COMMERCE BREADCRUMB CUSTOMIZE ================== //
+// ================ KNR-WP-THEME WOO COMMERCE BREADCRUMB CUSTOMIZE ================== //
 
-add_filter( 'woocommerce_breadcrumb_defaults', 'flatter_breadcrumb_defaults');
-function flatter_breadcrumb_defaults($defaults) {
+add_filter( 'woocommerce_breadcrumb_defaults', 'knr_breadcrumb_defaults');
+function knr_breadcrumb_defaults($defaults) {
 $defaults['delimiter'] = ''; //whatever delimiter you want
 return $defaults;
 }
@@ -389,7 +389,7 @@ return $defaults;
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function flatter_widgets_init() {
+function knr_widgets_init() {
 
 		global $_wp_sidebars_widgets;
         if ( !empty( $_wp_sidebars_widgets ) ) :
@@ -413,9 +413,9 @@ function flatter_widgets_init() {
 
 
 	register_sidebar( array(
-			'name'          => __('Category Right Sidebar','flatter'),
+			'name'          => __('Category Right Sidebar','knr'),
 			'id'            => 'sidebar-1',
-			'description'   => __('Drag your widgets for Right Sidebar here','flatter'),
+			'description'   => __('Drag your widgets for Right Sidebar here','knr'),
 			'before_widget' => '<div class="single">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="title">',
@@ -423,9 +423,9 @@ function flatter_widgets_init() {
 		) );
 
 	register_sidebar( array(
-		'name'          => __('Category Left Sidebar','flatter'),
+		'name'          => __('Category Left Sidebar','knr'),
 		'id'            => 'sidebar-2',
-		'description'   => __('Drag your widgets for Left Sidebar here','flatter'),
+		'description'   => __('Drag your widgets for Left Sidebar here','knr'),
 		'before_widget' => '<div class="single">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="title">',
@@ -433,9 +433,9 @@ function flatter_widgets_init() {
 	) );
 
 	register_sidebar( array(
-			'name'          => __('Shop Sidebar Left','flatter'),
+			'name'          => __('Shop Sidebar Left','knr'),
 			'id'            => 'shopsidebar_left',
-			'description'   => __('Drag your Woo-commerce Porducts widgets here','flatter'),
+			'description'   => __('Drag your Woo-commerce Porducts widgets here','knr'),
 			'before_widget' => '<div class="single">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="title">',
@@ -444,9 +444,9 @@ function flatter_widgets_init() {
 
 
 	register_sidebar( array(
-			'name'          => __('Footer Block','flatter'),
+			'name'          => __('Footer Block','knr'),
 			'id'            => 'footer_block',
-			'description'   => __('Footer Block supports 4 widgets here','flatter'),
+			'description'   => __('Footer Block supports 4 widgets here','knr'),
 			'before_widget' => '<div class="'.$sidebar_class.'">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h4 class="single-title">',
@@ -454,9 +454,9 @@ function flatter_widgets_init() {
 		) );
 	
 		register_sidebar( array(
-			'name'          => __('Newsletter Block','flatter'),
+			'name'          => __('Newsletter Block','knr'),
 			'id'            => 'newsletter_block',
-			'description'   => __('Install https://wordpress.org/plugins/newsletter/ to use this section','flatter'),
+			'description'   => __('Install https://wordpress.org/plugins/newsletter/ to use this section','knr'),
 			'before_widget' => '',
 			'after_widget'  => '',
 			'before_title'  => '<h4 class="single-title">',
@@ -464,9 +464,9 @@ function flatter_widgets_init() {
 		) );
 
 	register_sidebar( array(
-			'name'          => __('Contact Block','flatter'),
+			'name'          => __('Contact Block','knr'),
 			'id'            => 'contact_block',
-			'description'   => __('Paste your Google Map Location iFrame code here','flatter'),
+			'description'   => __('Paste your Google Map Location iFrame code here','knr'),
 			'before_widget' => '',
 			'after_widget'  => '',
 			'before_title'  => '<h4 class="single-title">',
@@ -475,25 +475,25 @@ function flatter_widgets_init() {
 
 
 }
-add_action( 'widgets_init', 'flatter_widgets_init' );
+add_action( 'widgets_init', 'knr_widgets_init' );
 
 
-if ( ! function_exists( 'flatter_fonts_url' ) ) :
+if ( ! function_exists( 'knr_fonts_url' ) ) :
 	/**
-	 * Register Google fonts for Flatter.
+	 * Register Google fonts for KnR.
 	 *
-	 * Create your own flatter_fonts_url() function to override in a child theme.
+	 * Create your own knr_fonts_url() function to override in a child theme.
 	 *
-	 * @since Flatter 1.0
+	 * @since KnR 1.0
 	 *
 	 * @return string Google fonts URL for the theme. 
 	 */
-function flatter_fonts_url() {
+function knr_fonts_url() {
 
-wp_enqueue_style( 'flatter-google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300', false ); 
+wp_enqueue_style( 'knr-google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300', false ); 
 }
 
-add_action( 'wp_enqueue_scripts', 'flatter_fonts_url' );
+add_action( 'wp_enqueue_scripts', 'knr_fonts_url' );
 
 endif;
 
@@ -518,21 +518,21 @@ endif;
 /**  line 517
  * Enqueue scripts and styles.
  */
-function flatter_scripts() {
+function knr_scripts() {
 	// use of google fonts
 	
-	wp_enqueue_style( 'flatter-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'knr-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri().'/css/bootstrap.css' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri().'/css/font-awesome.css' );
 	wp_enqueue_style( 'animate-min', get_template_directory_uri().'/css/animate.css' );
 	wp_enqueue_style( 'owl-carousel', get_template_directory_uri().'/css/owl.carousel.css' );
 	wp_enqueue_style( 'owl-theme', get_template_directory_uri().'/css/owl.theme.css' );
-	wp_enqueue_style( 'flatter-main', get_template_directory_uri().'/css/main.css' );	
-	wp_enqueue_style( 'flatter-responsive', get_template_directory_uri().'/css/responsive.css' );
+	wp_enqueue_style( 'knr-main', get_template_directory_uri().'/css/main.css' );	
+	wp_enqueue_style( 'knr-responsive', get_template_directory_uri().'/css/responsive.css' );
 	
 	
 	if(is_rtl()) {
-		wp_enqueue_style( 'flatter-rtl', get_template_directory_uri().'/css/rtl.css' );
+		wp_enqueue_style( 'knr-rtl', get_template_directory_uri().'/css/rtl.css' );
 		wp_enqueue_style( 'bootstrap-css-rtl', get_template_directory_uri().'/css/bootstrap-rtl.css' );
 		wp_enqueue_script( 'bootstrap-js-rtl', get_template_directory_uri() . '/js/bootstrap.rtl.js', array(), '1.0.0', true );
 	}
@@ -541,13 +541,13 @@ function flatter_scripts() {
 	wp_enqueue_script( 'jquery-owl-carousel', get_template_directory_uri() . '/js/owl.carousel.js', array('jquery'), '1.0.0', true );
 	wp_enqueue_script( 'jquery-smartmenus', get_template_directory_uri() . '/js/jquery.smartmenus.js', array('jquery'), '1.0.0', true );
 	wp_enqueue_script( 'jquery-wow', get_template_directory_uri() . '/js/wow.js', array('jquery'), '1.0.0', true );
-	wp_enqueue_script( 'flatter-script', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0.0', true );
+	wp_enqueue_script( 'knr-script', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0.0', true );
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'flatter_scripts' );
+add_action( 'wp_enqueue_scripts', 'knr_scripts' );
 
 
 //Implement the Custom Header feature.

@@ -5,16 +5,16 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 $template = get_option( 'template' );
 
 switch( $template ) {
-	case 'flatterone' :
+	case 'knrone' :
 		echo '<div id="primary"><div id="content" role="main">';
 		break;
-	case 'flattertwo' :
+	case 'knrtwo' :
 		echo '<div id="primary" class="site-content"><div id="content" role="main">';
 		break;
-	case 'flatterthree' :
+	case 'knrthree' :
 		echo '<div id="primary" class="site-content"><div id="content" role="main" class="entry-content twentythirteen">';
 		break;
-	case 'flatterfour' :
+	case 'knrfour' :
 		echo '<div id="primary" class="content-area"><div id="content" role="main" class="site-content twentyfourteen"><div class="tfwc">';
 		break;
 	default :

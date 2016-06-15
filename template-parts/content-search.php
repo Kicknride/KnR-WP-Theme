@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Flatter
+ * @package KnR
  */
 
 ?>
@@ -19,11 +19,11 @@
     <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
     
     <?php if ( 'post' === get_post_type() ) : ?>
-    <h6 class="post-info"><?php echo esc_attr( get_the_date('M d Y') );?><?php _e('- POSTED BY','flatter' ); ?> <?php echo esc_attr( get_the_author_meta('display_name') );?></h6>
+    <h6 class="post-info"><?php echo esc_attr( get_the_date('M d Y') );?><?php _e('- POSTED BY','knr' ); ?> <?php echo esc_attr( get_the_author_meta('display_name') );?></h6>
     <?php endif; ?>
     
     <p><?php the_excerpt(); ?></p>
-    <a href="<?php the_permalink(); ?>" title="" class="btn read-more"><?php _e('Read More', 'flatter'); ?></a>
+    <a href="<?php the_permalink(); ?>" title="" class="btn read-more"><?php _e('Read More', 'knr'); ?></a>
     
     <div class="tag-comment">
         <span class="pull-left"><i class="fa fa-tags"></i> <?php the_tags(); ?></span>

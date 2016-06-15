@@ -7,7 +7,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Flatter
+ * @package KnR
  */
 
 /*
@@ -30,7 +30,7 @@ if ( post_password_required() ) {
 			$comments_number = get_comments_number();
 			if ( 1 === $comments_number ) {
 				/* translators: %s: post title */
-				printf( _x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'flatter' ), get_the_title() );
+				printf( _x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'knr' ), get_the_title() );
 			} else {
 				printf(
 				/* translators: 1: number of comments, 2: post title */
@@ -39,7 +39,7 @@ if ( post_password_required() ) {
 						'%1$s thoughts on &ldquo;%2$s&rdquo;',
 						$comments_number,
 						'comments title',
-						'flatter'
+						'knr'
 					),
 					number_format_i18n( $comments_number ),
 					get_the_title()
@@ -50,11 +50,11 @@ if ( post_password_required() ) {
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
-			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'flatter' ); ?></h2>
+			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'knr' ); ?></h2>
 			<div class="nav-links">
 
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'flatter' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'flatter' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'knr' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'knr' ) ); ?></div>
 
 			</div><!-- .nav-links -->
 		</nav><!-- #comment-nav-above -->
@@ -75,7 +75,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'flatter' ); ?></p>
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'knr' ); ?></p>
 	<?php endif; ?>
 
 	<?php comment_form(); ?>

@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Flatter
+ * @package KnR
  */
 
 ?>
@@ -21,13 +21,13 @@
                   'data-wow-duration'=> '2s'
           		);
           		the_post_thumbnail('full',$arg);
-              echo esc_attr( flatter_the_post_thumbnail_caption() );
+              echo esc_attr( knr_the_post_thumbnail_caption() );
           	echo '</div>';              
         	} 
         ?> 
 
         <div class="post-info">
-            <span class="pull-left"><?php echo esc_attr( get_the_date('M d Y') );?><?php _e('- POSTED BY','flatter'); ?> <?php echo esc_html( get_the_author_meta('display_name') );?></span>
+            <span class="pull-left"><?php echo esc_attr( get_the_date('M d Y') );?><?php _e('- POSTED BY','knr'); ?> <?php echo esc_html( get_the_author_meta('display_name') );?></span>
             
             <span class="pull-right"><i class="fa fa-tags"></i> <?php the_tags(); ?> &nbsp;<i class="fa fa-comments"></i> <?php comments_popup_link('zero comment','one comment', '% comments');?></span>
         </div>
@@ -39,14 +39,14 @@
         	
         	<?php
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'flatter' ),
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'knr' ),
 					'after'  => '</div>',
 				) );
 			?>
         </div>    
     
 
-        <?php flatter_post_nav(); ?>
+        <?php knr_post_nav(); ?>
 
         <div class="comment-form">            
             <?php
@@ -62,7 +62,7 @@
 				edit_post_link(
 					sprintf(
 						/* translators: %s: Name of current post */
-						esc_html__( 'Edit %s', 'flatter' ),
+						esc_html__( 'Edit %s', 'knr' ),
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					),
 					'<span class="edit-link">',

@@ -1,8 +1,8 @@
 <?php
 /**
- * Flatter Theme Customizer.
+ * knr Theme Customizer.
  *
- * @package Flatter
+ * @package knr
  */
 
 /**
@@ -10,24 +10,24 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function flatter_customize_register( $wp_customize ) {
+function knr_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
 }
-add_action( 'customize_register', 'flatter_customize_register' );
+add_action( 'customize_register', 'knr_customize_register' );
 
 
 
 
-function flatter_customizer_register( $wp_customize ) 
+function knr_customizer_register( $wp_customize ) 
     {
       // Do stuff with $wp_customize, the WP_Customize_Manager object.
 
       $wp_customize->add_panel( 'theme_option', array(
         'priority' => 150,
-        'title' => __( 'Flatter Theme Option', 'flatter' ),
-        'description' => __( 'Welcome to Flatter Theme Option.', 'flatter' ),
+        'title' => __( 'KnR Theme Option', 'knr' ),
+        'description' => __( 'Welcome to KnR Theme Option.', 'knr' ),
       ));
 
       /**********************************************/
@@ -36,9 +36,9 @@ function flatter_customizer_register( $wp_customize )
 
   /*   $wp_customize->add_section('theme_logo',array(
         'priority' => 30,
-        'title' => __('Theme Logo','flatter'),
+        'title' => __('Theme Logo','knr'),
         'capability' => 'edit_theme_options',
-        'description' => __('Upload image of 200px width and 52px height for logo','flatter'),
+        'description' => __('Upload image of 200px width and 52px height for logo','knr'),
         'panel' => 'theme_option',
       ));
 
@@ -48,7 +48,7 @@ function flatter_customizer_register( $wp_customize )
       ));
 
       $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'logo_image',array(
-        'label' => __('Edit Theme Logo','flatter'),
+        'label' => __('Edit Theme Logo','knr'),
         'section' => 'theme_logo',
         'settings' => 'logo_image'
         )  
@@ -59,20 +59,20 @@ function flatter_customizer_register( $wp_customize )
       /**********************************************/     
 
       $wp_customize->add_section('slider_category',array(
-        'title' => __('Slider Categories','flatter'),
+        'title' => __('Slider Categories','knr'),
         'capability' => 'edit_theme_options',
-        'description' => __('Select the Slide Category for Homepage.','flatter'),
+        'description' => __('Select the Slide Category for Homepage.','knr'),
         'panel' => 'theme_option'
       ));
 
       $wp_customize->add_setting('slider_category_display',array(
-        'sanitize_callback' => 'flatter_sanitize_category',
+        'sanitize_callback' => 'knr_sanitize_category',
         'capability' => 'edit_theme_options',
         'default' => ''
       ));
 
-      $wp_customize->add_control(new flatter_Customize_Dropdown_Taxonomies_Control($wp_customize,'slider_category_display',array(
-        'label' => __('Choose category','flatter'),
+      $wp_customize->add_control(new knr_Customize_Dropdown_Taxonomies_Control($wp_customize,'slider_category_display',array(
+        'label' => __('Choose category','knr'),
         'section' => 'slider_category',
         'settings' => 'slider_category_display',
         'type'=> 'dropdown-taxonomies',
@@ -81,11 +81,11 @@ function flatter_customizer_register( $wp_customize )
 
       $wp_customize->add_setting('slider_category_display_num',array(
         'capability'=>'edit_theme_options',
-        'sanitize_callback' => 'flatter_sanitize_text',
+        'sanitize_callback' => 'knr_sanitize_text',
         'default'=>'2',
         ));
-      $wp_customize->add_control(new flatter_Select_Customize_Control($wp_customize,'slider_category_display_num',array(
-        'label'=>__('Select Number of Post','flatter'),
+      $wp_customize->add_control(new knr_Select_Customize_Control($wp_customize,'slider_category_display_num',array(
+        'label'=>__('Select Number of Post','knr'),
         'section'=>'slider_category',
         'settings'=>'slider_category_display_num',
         'type'=>'select',
@@ -106,7 +106,7 @@ function flatter_customizer_register( $wp_customize )
       $wp_customize->add_control(
         'slider_button',
          array(
-          'label' => __('Contact Us Link','flatter'),
+          'label' => __('Contact Us Link','knr'),
           'section' => 'slider_category',
           'settings' => 'slider_button',
           'type' => 'text',
@@ -119,20 +119,20 @@ function flatter_customizer_register( $wp_customize )
       /**********************************************/     
 
       $wp_customize->add_section('features_category',array(
-        'title' => __('Features Categories','flatter'),
+        'title' => __('Features Categories','knr'),
         'capability' => 'edit_theme_options',
-        'description' => __('Select the Features Content Category.','flatter'),
+        'description' => __('Select the Features Content Category.','knr'),
         'panel' => 'theme_option'
       ));
 
       $wp_customize->add_setting('features_category_display',array(
-        'sanitize_callback' => 'flatter_sanitize_category',
+        'sanitize_callback' => 'knr_sanitize_category',
         'capability' => 'edit_theme_options',
         'default' => ''
       ));
 
-      $wp_customize->add_control(new flatter_Customize_Dropdown_Taxonomies_Control($wp_customize,'features_category_display',array(
-        'label' => __('Choose category','flatter'),
+      $wp_customize->add_control(new knr_Customize_Dropdown_Taxonomies_Control($wp_customize,'features_category_display',array(
+        'label' => __('Choose category','knr'),
         'section' => 'features_category',
         'settings' => 'features_category_display',
         'type'=> 'dropdown-taxonomies',
@@ -140,11 +140,11 @@ function flatter_customizer_register( $wp_customize )
       ));
        $wp_customize->add_setting('featured_category_status',array(
         'capability'=>'edit_theme_options',
-        'sanitize_callback' => 'flatter_sanitize_text',
+        'sanitize_callback' => 'knr_sanitize_text',
         'default'=>0,
         ));
-      $wp_customize->add_control(new flatter_Select_Customize_Control($wp_customize,'featured_category_status',array(
-        'label'=>__('Enable/Disable Featured Content','flatter'),
+      $wp_customize->add_control(new knr_Select_Customize_Control($wp_customize,'featured_category_status',array(
+        'label'=>__('Enable/Disable Featured Content','knr'),
         'section'=>'features_category',
         'settings'=>'featured_category_status',
         'type'=>'select',
@@ -158,16 +158,16 @@ function flatter_customizer_register( $wp_customize )
       /**********************************************/     
 
       $wp_customize->add_section('services_category',array(
-        'title' => __('Services Categories','flatter'),
+        'title' => __('Services Categories','knr'),
         'capability' => 'edit_theme_options',
-        'description' => __('Select the Services Category for Homepage.','flatter'),
+        'description' => __('Select the Services Category for Homepage.','knr'),
         'panel' => 'theme_option'
       ));
 
       $wp_customize->add_setting(
         'services_title',
           array(
-            'sanitize_callback' => 'flatter_sanitize_text',
+            'sanitize_callback' => 'knr_sanitize_text',
             'capability' => 'edit_theme_options',  
             'default' => 'Our Services',
           )
@@ -176,7 +176,7 @@ function flatter_customizer_register( $wp_customize )
       $wp_customize->add_control(
         'services_title',
           array(
-          'label' => __('Our Services Title','flatter'),
+          'label' => __('Our Services Title','knr'),
           'section' => 'services_category',
           'settings' => 'services_title',
           'type' => 'text',
@@ -184,13 +184,13 @@ function flatter_customizer_register( $wp_customize )
       );
 
       $wp_customize->add_setting('services_category_display',array(
-        'sanitize_callback' => 'flatter_sanitize_category',
+        'sanitize_callback' => 'knr_sanitize_category',
         'capability' => 'edit_theme_options',
         'default' => ''
       ));
 
-      $wp_customize->add_control(new flatter_Customize_Dropdown_Taxonomies_Control($wp_customize,'services_category_display',array(
-        'label' => __('Choose category','flatter'),
+      $wp_customize->add_control(new knr_Customize_Dropdown_Taxonomies_Control($wp_customize,'services_category_display',array(
+        'label' => __('Choose category','knr'),
         'section' => 'services_category',
         'settings' => 'services_category_display',
         'type'=> 'dropdown-taxonomies',
@@ -198,11 +198,11 @@ function flatter_customizer_register( $wp_customize )
       ));
         $wp_customize->add_setting('services_category_status',array(
         'capability'=>'edit_theme_options',
-        'sanitize_callback' => 'flatter_sanitize_text',
+        'sanitize_callback' => 'knr_sanitize_text',
         'default'=>0,
         ));
-      $wp_customize->add_control(new flatter_Select_Customize_Control($wp_customize,'services_category_status',array(
-        'label'=>__('Enable/Disable Services Section','flatter'),
+      $wp_customize->add_control(new knr_Select_Customize_Control($wp_customize,'services_category_status',array(
+        'label'=>__('Enable/Disable Services Section','knr'),
         'section'=>'services_category',
         'settings'=>'services_category_status',
         'type'=>'select',
@@ -216,16 +216,16 @@ function flatter_customizer_register( $wp_customize )
       /**********************************************/     
 
       $wp_customize->add_section('testimonial_category',array(
-        'title' => __('Testimonials Categories','flatter'),
+        'title' => __('Testimonials Categories','knr'),
         'capability' => 'edit_theme_options',
-        'description' => __('Select the Testimonials Category for Homepage.','flatter'),
+        'description' => __('Select the Testimonials Category for Homepage.','knr'),
         'panel' => 'theme_option'
       ));
 
       $wp_customize->add_setting(
         'testimonial_title',
           array(
-            'sanitize_callback' => 'flatter_sanitize_text',
+            'sanitize_callback' => 'knr_sanitize_text',
             'capability' => 'edit_theme_options',
             'default' => 'Testimonials',
           )
@@ -234,7 +234,7 @@ function flatter_customizer_register( $wp_customize )
       $wp_customize->add_control(
         'testimonial_title',
           array(
-          'label' => __('Testimonials Title','flatter'),
+          'label' => __('Testimonials Title','knr'),
           'section' => 'testimonial_category',
           'settings' => 'testimonial_title',
           'type' => 'text',
@@ -242,13 +242,13 @@ function flatter_customizer_register( $wp_customize )
       );
 
       $wp_customize->add_setting('testimonial_category_display',array(
-        'sanitize_callback' => 'flatter_sanitize_category',
+        'sanitize_callback' => 'knr_sanitize_category',
         'capability' => 'edit_theme_options',
         'default' => ''
       ));
 
-      $wp_customize->add_control(new flatter_Customize_Dropdown_Taxonomies_Control($wp_customize,'testimonial_category_display',array(
-        'label' => __('Choose category','flatter'),
+      $wp_customize->add_control(new knr_Customize_Dropdown_Taxonomies_Control($wp_customize,'testimonial_category_display',array(
+        'label' => __('Choose category','knr'),
         'section' => 'testimonial_category',
         'settings' => 'testimonial_category_display',
         'type'=> 'dropdown-taxonomies',
@@ -261,18 +261,18 @@ function flatter_customizer_register( $wp_customize )
         ));
 
       $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'testimonial_category_background', array(
-        'label' => __('Edit Testimonial Background','flatter'),
+        'label' => __('Edit Testimonial Background','knr'),
         'section' => 'testimonial_category',
         'settings' => 'testimonial_category_background'
         )
         ));
         $wp_customize->add_setting('testimonial_category_status',array(
         'capability'=>'edit_theme_options',
-        'sanitize_callback' => 'flatter_sanitize_text',
+        'sanitize_callback' => 'knr_sanitize_text',
         'default'=>0,
         ));
-      $wp_customize->add_control(new flatter_Select_Customize_Control($wp_customize,'testimonial_category_status',array(
-        'label'=>__('Enable/Disable Testimonials Section','flatter'),
+      $wp_customize->add_control(new knr_Select_Customize_Control($wp_customize,'testimonial_category_status',array(
+        'label'=>__('Enable/Disable Testimonials Section','knr'),
         'section'=>'testimonial_category',
         'settings'=>'testimonial_category_status',
         'type'=>'select',
@@ -285,16 +285,16 @@ function flatter_customizer_register( $wp_customize )
       /**********************************************/     
 
       $wp_customize->add_section('latestpost_category',array(
-        'title' => __('Latest Post Categories','flatter'),
+        'title' => __('Latest Post Categories','knr'),
         'capability' => 'edit_theme_options',
-        'description' => __('Select the Latest Post Category for Homepage.','flatter'),
+        'description' => __('Select the Latest Post Category for Homepage.','knr'),
         'panel' => 'theme_option'
       ));
 
       $wp_customize->add_setting(
         'latestpost_title',
           array(
-            'sanitize_callback' => 'flatter_sanitize_text',
+            'sanitize_callback' => 'knr_sanitize_text',
             'capability' => 'edit_theme_options',
             'default' => 'Latest Post',
           )
@@ -303,7 +303,7 @@ function flatter_customizer_register( $wp_customize )
       $wp_customize->add_control(
         'latestpost_title',
           array(
-          'label' => __('Latest Post Title','flatter'),
+          'label' => __('Latest Post Title','knr'),
           'section' => 'latestpost_category',
           'settings' => 'latestpost_title',
           'type' => 'text',
@@ -311,13 +311,13 @@ function flatter_customizer_register( $wp_customize )
       );
 
       $wp_customize->add_setting('latestpost_category_display',array(
-        'sanitize_callback' => 'flatter_sanitize_category',
+        'sanitize_callback' => 'knr_sanitize_category',
         'capability' => 'edit_theme_options',
         'default' => ''
       ));
 
-      $wp_customize->add_control(new flatter_Customize_Dropdown_Taxonomies_Control($wp_customize,'latestpost_category_display',array(
-        'label' => __('Choose category','flatter'),
+      $wp_customize->add_control(new knr_Customize_Dropdown_Taxonomies_Control($wp_customize,'latestpost_category_display',array(
+        'label' => __('Choose category','knr'),
         'section' => 'latestpost_category',
         'settings' => 'latestpost_category_display',
         'type'=> 'dropdown-taxonomies',
@@ -326,11 +326,11 @@ function flatter_customizer_register( $wp_customize )
 
           $wp_customize->add_setting('latestpost_category_status',array(
         'capability'=>'edit_theme_options',
-        'sanitize_callback' => 'flatter_sanitize_text',
+        'sanitize_callback' => 'knr_sanitize_text',
         'default'=>0,
         ));
-      $wp_customize->add_control(new flatter_Select_Customize_Control($wp_customize,'latestpost_category_status',array(
-        'label'=>__('Enable/Disable Latest Post Section','flatter'),
+      $wp_customize->add_control(new knr_Select_Customize_Control($wp_customize,'latestpost_category_status',array(
+        'label'=>__('Enable/Disable Latest Post Section','knr'),
         'section'=>'latestpost_category',
         'settings'=>'latestpost_category_status',
         'type'=>'select',
@@ -344,16 +344,16 @@ function flatter_customizer_register( $wp_customize )
       /**********************************************/     
 
       $wp_customize->add_section('ourworks_category',array(
-        'title' => __('Our Works Categories','flatter'),
+        'title' => __('Our Works Categories','knr'),
         'capability' => 'edit_theme_options',
-        'description' => __('Select the Our Works Category for Homepage.','flatter'),
+        'description' => __('Select the Our Works Category for Homepage.','knr'),
         'panel' => 'theme_option'
       ));
 
       $wp_customize->add_setting(
         'ourworks_title',
           array(
-            'sanitize_callback' => 'flatter_sanitize_text',
+            'sanitize_callback' => 'knr_sanitize_text',
             'capability' => 'edit_theme_options',
             'default' => 'Our Works',
           )
@@ -362,7 +362,7 @@ function flatter_customizer_register( $wp_customize )
       $wp_customize->add_control(
         'ourworks_title',
           array(
-          'label' => __('Our Works Title','flatter'),
+          'label' => __('Our Works Title','knr'),
           'section' => 'ourworks_category',
           'settings' => 'ourworks_title',
           'type' => 'text',
@@ -370,13 +370,13 @@ function flatter_customizer_register( $wp_customize )
       );
 
       $wp_customize->add_setting('ourworks_category_display',array(
-        'sanitize_callback' => 'flatter_sanitize_category',
+        'sanitize_callback' => 'knr_sanitize_category',
         'capability' => 'edit_theme_options',
         'default' => ''
       ));
 
-      $wp_customize->add_control(new flatter_Customize_Dropdown_Taxonomies_Control($wp_customize,'ourworks_category_display',array(
-        'label' => __('Choose category','flatter'),
+      $wp_customize->add_control(new knr_Customize_Dropdown_Taxonomies_Control($wp_customize,'ourworks_category_display',array(
+        'label' => __('Choose category','knr'),
         'section' => 'ourworks_category',
         'settings' => 'ourworks_category_display',
         'type'=> 'dropdown-taxonomies',
@@ -384,11 +384,11 @@ function flatter_customizer_register( $wp_customize )
       ));
       $wp_customize->add_setting('ourworks_category_status',array(
         'capability'=>'edit_theme_options',
-        'sanitize_callback' => 'flatter_sanitize_text',
+        'sanitize_callback' => 'knr_sanitize_text',
         'default'=>0,
         ));
-      $wp_customize->add_control(new flatter_Select_Customize_Control($wp_customize,'ourworks_category_status',array(
-        'label'=>__('Enable/Disable Our Works Section','flatter'),
+      $wp_customize->add_control(new knr_Select_Customize_Control($wp_customize,'ourworks_category_status',array(
+        'label'=>__('Enable/Disable Our Works Section','knr'),
         'section'=>'ourworks_category',
         'settings'=>'ourworks_category_status',
         'type'=>'select',
@@ -401,16 +401,16 @@ function flatter_customizer_register( $wp_customize )
       /**********************************************/
 
       $wp_customize->add_section('newsletter_text',array(
-        'title' => __('Newsletter Section','flatter'),
+        'title' => __('Newsletter Section','knr'),
         'capability' => 'edit_theme_options',
-        'description' => __('Write Some Words for Newsletter Section in Homepage.install Newsletter plugin to use this section','flatter'),
+        'description' => __('Write Some Words for Newsletter Section in Homepage.install Newsletter plugin to use this section','knr'),
         'panel' => 'theme_option'
       ));
 
       $wp_customize->add_setting(
         'newsletter_textbox',
           array(
-            'sanitize_callback' => 'flatter_sanitize_text',
+            'sanitize_callback' => 'knr_sanitize_text',
             'capability' => 'edit_theme_options',
             'default' => 'Subscribe for newsletter',
           )
@@ -419,7 +419,7 @@ function flatter_customizer_register( $wp_customize )
       $wp_customize->add_control(
         'newsletter_textbox',
           array(
-          'label' => __('Newsletter Textbox','flatter'),
+          'label' => __('Newsletter Textbox','knr'),
           'section' => 'newsletter_text',
           'settings' => 'newsletter_textbox',
           'type' => 'text',
@@ -433,9 +433,9 @@ function flatter_customizer_register( $wp_customize )
        $wp_customize->add_section(
         'footer_section',
           array(
-            'title' => __('Footer Settings','flatter'),
+            'title' => __('Footer Settings','knr'),
             'capability' => 'edit_theme_options',
-            'description' => __('Customize your Footer section.','flatter'),
+            'description' => __('Customize your Footer section.','knr'),
             'panel' => 'theme_option'
         )
       );
@@ -448,16 +448,16 @@ function flatter_customizer_register( $wp_customize )
       $wp_customize->add_setting(
         'copyright_textbox',
           array(
-            'sanitize_callback' => 'flatter_sanitize_text',
+            'sanitize_callback' => 'knr_sanitize_text',
             'capability' => 'edit_theme_options',
-            'default' => '&copy; 2016. FLATTER. All Rights Reserved.',
+            'default' => '&copy; 2016. Kick\'n Ride. All Rights Reserved.',
           )
       );
 
       $wp_customize->add_control(
         'copyright_textbox',
           array(
-          'label' => __('Copyright text','flatter'),
+          'label' => __('Copyright text','knr'),
           'section' => 'footer_section',
           'settings' => 'copyright_textbox',
           'type' => 'text',
@@ -470,13 +470,13 @@ function flatter_customizer_register( $wp_customize )
       /**********************************************/
 
       $wp_customize->add_setting('socialicon_display',array(
-        'sanitize_callback' => 'flatter_sanitize_text',
+        'sanitize_callback' => 'knr_sanitize_text',
         'capability' => 'edit_theme_options',
         'default' => '1'
       ));
 
       $wp_customize->add_control(new WP_Customize_Control($wp_customize,'socialicon_display',array(
-        'label' => __('Show social icons','flatter'),
+        'label' => __('Show social icons','knr'),
         'section' => 'footer_section',
         'settings' => 'socialicon_display',
         'type'=> 'checkbox',
@@ -500,7 +500,7 @@ function flatter_customizer_register( $wp_customize )
       $wp_customize->add_control(
         'facebook_textbox',
           array(
-            'label' =>__('Facebook','flatter'),
+            'label' =>__('Facebook','knr'),
             'section' => 'footer_section',
             'settings' => 'facebook_textbox',
             'type' => 'text',
@@ -519,7 +519,7 @@ function flatter_customizer_register( $wp_customize )
       $wp_customize->add_control(
         'twitter_textbox',
          array(
-          'label' => __('Twitter','flatter'),
+          'label' => __('Twitter','knr'),
           'section' => 'footer_section',
           'settings' => 'twitter_textbox',
           'type' => 'text',
@@ -538,7 +538,7 @@ function flatter_customizer_register( $wp_customize )
       $wp_customize->add_control(
         'googleplus_textbox',
           array(
-          'label' => __('Googleplus','flatter'),
+          'label' => __('Googleplus','knr'),
           'section' => 'footer_section',
           'settings' => 'googleplus_textbox',
           'type' => 'text',
@@ -557,7 +557,7 @@ function flatter_customizer_register( $wp_customize )
       $wp_customize->add_control(
         'youtube_textbox',
           array(
-            'label' => __('YouTube','flatter'),
+            'label' => __('YouTube','knr'),
             'section' => 'footer_section',
             'settings' => 'youtube_textbox',
             'type' => 'text',
@@ -576,37 +576,75 @@ function flatter_customizer_register( $wp_customize )
       $wp_customize->add_control(
         'linkedin_textbox',
          array(
-          'label' => __('Linkedin','flatter'),
+          'label' => __('Linkedin','knr'),
           'section' => 'footer_section',
           'settings' => 'linkedin_textbox',
           'type' => 'text',
          )
       );
 
+    $wp_customize->add_setting(
+        'github_textbox',
+          array(
+            'sanitize_callback' => 'esc_url_raw',
+            'capability' => 'edit_theme_options',
+            'default' => '',
+          )
+      );
+
+      $wp_customize->add_control(
+        'github_textbox',
+          array(
+            'label' =>__('GitHub','knr'),
+            'section' => 'footer_section',
+            'settings' => 'github_textbox',
+            'type' => 'text',
+          )
+      );
+      
+    $wp_customize->add_setting(
+        'instagram_textbox',
+          array(
+            'sanitize_callback' => 'esc_url_raw',
+            'capability' => 'edit_theme_options',
+            'default' => '',
+          )
+      );
+
+      $wp_customize->add_control(
+        'instagram_textbox',
+          array(
+            'label' =>__('Instagram','knr'),
+            'section' => 'footer_section',
+            'settings' => 'instagram_textbox',
+            'type' => 'text',
+          )
+      );
+      
       /**********************************************/
       /***** ADJUSTMENT OF SIDEBAR POSITION SECTION *****/
       /**********************************************/
      
       $wp_customize->add_panel( 'layout', array(
         'priority' => 160,
-        'title' => __( 'Flatter Sidebar Layout', 'flatter' ),
-        'description' => __( 'Theme Sidebar Layout', 'flatter' ),
+        'title' => __( 'knr Sidebar Layout', 'knr' ),
+        'description' => __( 'Theme Sidebar Layout', 'knr' ),
       ));
 
       $wp_customize->add_section('sidebar' , array(
-        'title' => __('Category Sidebar','flatter'),
+        'title' => __('Category Sidebar','knr'),
         'capability' => 'edit_theme_options',
         'panel' => 'layout'
       ));
 
       $wp_customize->add_setting('sidebar_position', array(
-        'sanitize_callback' => 'flatter_sanitize_text',
+        'sanitize_callback' => 'knr_sanitize_text',
         'capability' => 'edit_theme_options',
           'default' => 'right'
         ));
 
       $wp_customize->add_control('sidebar_position', array(
-        'label'      => __('Sidebar position', 'flatter'),
+        'label'      => __('Sidebar position', 'knr'),
         'section'    => 'sidebar',
         'settings'   => 'sidebar_position',
         'type'       => 'radio',
@@ -624,20 +662,20 @@ function flatter_customizer_register( $wp_customize )
      
 
       $wp_customize->add_section('single_post_sidebar' , array(
-        'title' => __('Single Post Sidebar','flatter'),
+        'title' => __('Single Post Sidebar','knr'),
         'capability' => 'edit_theme_options',
         'panel' => 'layout'
       ));
 
 
       $wp_customize->add_setting('single_post_sidebar_position', array(
-        'sanitize_callback' => 'flatter_sanitize_text',
+        'sanitize_callback' => 'knr_sanitize_text',
         'capability' => 'edit_theme_options',
           'default' => 'right'
       ));
 
       $wp_customize->add_control('single_post_sidebar_position', array(
-        'label'      => __('Single Post Sidebar position', 'flatter'),
+        'label'      => __('Single Post Sidebar position', 'knr'),
         'section'    => 'single_post_sidebar',
         'settings'   => 'single_post_sidebar_position',
         'type'       => 'radio',
@@ -655,20 +693,20 @@ function flatter_customizer_register( $wp_customize )
      
 
       $wp_customize->add_section('single_page_sidebar' , array(
-        'title' => __('Single Page Sidebar','flatter'),
+        'title' => __('Single Page Sidebar','knr'),
         'capability' => 'edit_theme_options',
         'panel' => 'layout'
       ));
 
 
       $wp_customize->add_setting('single_page_sidebar_position', array(
-        'sanitize_callback' => 'flatter_sanitize_text',
+        'sanitize_callback' => 'knr_sanitize_text',
         'capability' => 'edit_theme_options',
           'default' => 'right'
       ));
 
       $wp_customize->add_control('single_page_sidebar_position', array(
-        'label'      => __('Single Page Sidebar position', 'flatter'),
+        'label'      => __('Single Page Sidebar position', 'knr'),
         'section'    => 'single_page_sidebar',
         'settings'   => 'single_page_sidebar_position',
         'type'       => 'radio',
@@ -685,20 +723,20 @@ function flatter_customizer_register( $wp_customize )
       /**********************************************/     
 
       $wp_customize->add_section('search_page_sidebar' , array(
-        'title' => __('Search Page Sidebar','flatter'),
+        'title' => __('Search Page Sidebar','knr'),
         'capability' => 'edit_theme_options',
         'panel' => 'layout'
       ));
 
 
       $wp_customize->add_setting('search_page_sidebar_position', array(
-        'sanitize_callback' => 'flatter_sanitize_text',
+        'sanitize_callback' => 'knr_sanitize_text',
         'capability' => 'edit_theme_options',
           'default' => 'right'
       ));
 
       $wp_customize->add_control('search_page_sidebar_position', array(
-        'label'      => __('Search Page Sidebar position', 'flatter'),
+        'label'      => __('Search Page Sidebar position', 'knr'),
         'section'    => 'search_page_sidebar',
         'settings'   => 'search_page_sidebar_position',
         'type'       => 'radio',
@@ -710,27 +748,27 @@ function flatter_customizer_register( $wp_customize )
       ));
 
       /**********************************************/
-      /******** About Flatter *********/
+      /******** About knr *********/
       /**********************************************/    
-  $wp_customize->add_section('flatter_about_section', array(    
-    'title'       => __('About Flatter Theme', 'flatter'),
+  $wp_customize->add_section('knr_about_section', array(    
+    'title'       => __('About knr Theme', 'knr'),
     'priority' => 400,    
   ));
 
-  $wp_customize->add_setting( 'flatter_about_section', array(
+  $wp_customize->add_setting( 'knr_about_section', array(
    'default'               => '',
    'type'                  => 'theme_mod',
    'capability'            => 'edit_theme_options',
    'theme_supports'        => '',
    'transport'             => 'refresh',
-   'sanitize_callback' => 'flatter_sanitize_html'      
+   'sanitize_callback' => 'knr_sanitize_html'      
   ) );
 
-  $wp_customize->add_control(new about_flatter_theme($wp_customize, 'flatter_about_section', 
+  $wp_customize->add_control(new about_knr_theme($wp_customize, 'knr_about_section', 
       array(
-        'label' => __('Important Links', 'flatter'),        
-        'settings' => 'flatter_about_section',
-        'section' => 'flatter_about_section'
+        'label' => __('Important Links', 'knr'),        
+        'settings' => 'knr_about_section',
+        'section' => 'knr_about_section'
       )
     )
   );
@@ -740,20 +778,20 @@ function flatter_customizer_register( $wp_customize )
       /**********************************************/     
 
       $wp_customize->add_section('page_not_found_sidebar' , array(
-        'title' => __('Page Not Found Sidebar','flatter'),
+        'title' => __('Page Not Found Sidebar','knr'),
         'capability' => 'edit_theme_options',
         'panel' => 'layout'
       ));
 
 
       $wp_customize->add_setting('page_not_found_sidebar_position', array(
-        'sanitize_callback' => 'flatter_sanitize_text',
+        'sanitize_callback' => 'knr_sanitize_text',
         'capability' => 'edit_theme_options',
           'default' => 'right'
       ));
 
       $wp_customize->add_control('page_not_found_sidebar_position', array(
-        'label'      => __('Page Not Found Sidebar position', 'flatter'),
+        'label'      => __('Page Not Found Sidebar position', 'knr'),
         'section'    => 'page_not_found_sidebar',
         'settings'   => 'page_not_found_sidebar_position',
         'type'       => 'radio',
@@ -767,40 +805,27 @@ function flatter_customizer_register( $wp_customize )
       
     }
 
-add_action( 'customize_register', 'flatter_customizer_register' );
+add_action( 'customize_register', 'knr_customizer_register' );
 
 
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function flatter_customize_preview_js() {
-	wp_enqueue_script( 'flatter_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+function knr_customize_preview_js() {
+	wp_enqueue_script( 'knr_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
-add_action( 'customize_preview_init', 'flatter_customize_preview_js' );
+add_action( 'customize_preview_init', 'knr_customize_preview_js' );
 
-/**
- * Enqueue scripts for customizer
- */
-function flatter_customizer_js() {
-    wp_enqueue_script('flatter-customizer', get_template_directory_uri() . '/js/flatter-customizer.js', array('jquery'), '1.3.0', true);
-
-    wp_localize_script( 'flatter-customizer', 'flatter_customizer_js_obj', array(
-        'pro' => __('Upgrade To Flatter Plus','flatter')
-    ) );
-    wp_enqueue_style( 'flatter-customizer', get_template_directory_uri() . '/css/flatter-customizer.css');
-}
-add_action( 'customize_controls_enqueue_scripts', 'flatter_customizer_js' );
-
-function flatter_sanitize_text( $input ) {
+function knr_sanitize_text( $input ) {
     return wp_kses_post( force_balance_tags( $input ) );
 }
 
-function flatter_sanitize_textarea( $input ) {
+function knr_sanitize_textarea( $input ) {
     return wp_kses_post( force_balance_tags( $input ) );
 }
 
-function flatter_sanitize_category($input){
+function knr_sanitize_category($input){
   $output=intval($input);
   return $output;
 

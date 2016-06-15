@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Flatter
+ * @package KnR-WP-Theme
  */
 
 if ( ! is_active_sidebar( 'sidebar-2' ) ) {

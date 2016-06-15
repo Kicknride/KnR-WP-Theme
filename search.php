@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package Flatter
+ * @package KnR
  */
 
 get_header(); ?>
@@ -17,9 +17,9 @@ get_header(); ?>
 	        <div class="row">
 	            <div class="col-sm-12">
 	                <div class="block">
-	                    <h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'flatter' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+	                    <h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'knr' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 	                    <div class="underline"></div>
-	                    <?php flatter_breadcrumbs(); ?>
+	                    <?php knr_breadcrumbs(); ?>
 	                </div>
 	            </div>
 	        </div>
@@ -31,7 +31,7 @@ get_header(); ?>
         	<div class="row">
         		<?php
 					$class = 'col-md-6';
-					$sidebar =  get_theme_mod('search_page_sidebar_position',__('right','flatter'));
+					$sidebar =  get_theme_mod('search_page_sidebar_position',__('right','knr'));
 					 if($sidebar != 'both'){
 							$class = 'col-md-9';
 					}
