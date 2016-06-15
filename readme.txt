@@ -24,18 +24,6 @@ Smart Menu : http://www.smartmenus.org/
 Font Awesome :Font-Awesome https://github.com/FortAwesome/Font-Awesome [MIT](http://opensource.org/licenses/MIT)- by @davegandy
 Based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 Bootstrap: http://getbootstrap.com/  licensed MIT, docs CC BY 3.0.
-Photo Source: https://www.pexels.com/photo/road-mountains-clouds-street-4593/
-
-Image licences Used in screenshot
-1.https://unsplash.com/photos/RSOxw9X-suY CC0 License
-2.https://commons.wikimedia.org/wiki/File:Canola_crop_near_Kojonup.jpg  CC0 License
-3.https://unsplash.com/photos/DgtRKZOOE0w CC0 License
-4.https://www.pexels.com/photo/pond-dock-woods-forest-31370/ CC0 License
-5.https://unsplash.com/photos/kMU_2u2Ap2g CC0 License
-6.https://www.pexels.com/photo/road-mountains-clouds-street-4593/ CC0 License
-
-
-
 
 == INSTALLATION ==
 	
