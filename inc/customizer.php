@@ -583,6 +583,44 @@ function knr_customizer_register( $wp_customize )
          )
       );
 
+    $wp_customize->add_setting(
+        'github_textbox',
+          array(
+            'sanitize_callback' => 'esc_url_raw',
+            'capability' => 'edit_theme_options',
+            'default' => '',
+          )
+      );
+
+      $wp_customize->add_control(
+        'github_textbox',
+          array(
+            'label' =>__('GitHub','knr'),
+            'section' => 'footer_section',
+            'settings' => 'github_textbox',
+            'type' => 'text',
+          )
+      );
+      
+    $wp_customize->add_setting(
+        'instagram_textbox',
+          array(
+            'sanitize_callback' => 'esc_url_raw',
+            'capability' => 'edit_theme_options',
+            'default' => '',
+          )
+      );
+
+      $wp_customize->add_control(
+        'instagram_textbox',
+          array(
+            'label' =>__('Instagram','knr'),
+            'section' => 'footer_section',
+            'settings' => 'instagram_textbox',
+            'type' => 'text',
+          )
+      );
+      
       /**********************************************/
       /***** ADJUSTMENT OF SIDEBAR POSITION SECTION *****/
       /**********************************************/
