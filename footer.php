@@ -72,6 +72,8 @@
                             $googleplus = esc_url(get_theme_mod('googleplus_textbox'));
                             $youtube = esc_url(get_theme_mod('youtube_textbox'));
                             $linkedin = esc_url(get_theme_mod('linkedin_textbox'));
+                            $github = esc_url(get_theme_mod('github_textbox'));
+                            $instagram = esc_url(get_theme_mod('instagram_textbox'));
 
                             if($facebook){?>
                                 <li><a href="<?php echo $facebook;?>"><i class="fa fa-facebook"></i></a></li>
@@ -87,6 +89,12 @@
                             <?php }
                             if($linkedin){?>
                                 <li><a href="<?php echo $linkedin;?>"><i class="fa fa-linkedin"></i></a></li>
+                            <?php }
+                            if($github){?>
+                                <li><a href="<?php echo $github;?>"><i class="fa fa-github"></i></a></li>
+                            <?php }
+                            if($instagram){?>
+                                <li><a href="<?php echo $instagram;?>"><i class="fa fa-instagram"></i></a></li>
                             <?php }?>
                         </ul>
 
