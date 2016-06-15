@@ -108,7 +108,7 @@ msgid "Toggle navigation"
 msgstr ""
 
 #: footer.php: 52
-msgid "&copy; 2015. KNR-WP-THEME. All Rights Reserved."
+msgid "&copy; 2016. Kick\'n Ride. All Rights Reserved."
 msgstr ""
 
 #: footer.php: 58
