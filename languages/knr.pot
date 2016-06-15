@@ -263,18 +263,6 @@ msgstr ""
 msgid "Kick\'n Ride Themes"
 msgstr ""
 
-#: inc/extras.php:86
-#msgid "KnRPlus Preview:"
-#msgstr ""
-
-#: inc/extras.php:87
-#msgid "View Demo"
-#msgstr ""
-
-#: inc/extras.php:92
-#msgid "About KnRPlus:"
-#msgstr ""
-
 #: inc/extras.php:93
 msgid"CLick Here"
 msgstr""
