@@ -18,7 +18,7 @@
 
     <h3 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
-    <h6 class="post-info"><?php echo esc_attr( get_the_date('M d Y') );?><?php _e('- POSTED BY','knr');?> <?php echo esc_html( get_the_author_meta('display_name') );?></h6>
+    <h6 class="post-info"><?php echo esc_attr( get_the_date('M d Y') );?> <?php _e('- POSTED BY','knr');?> <?php echo esc_html( get_the_author_meta('display_name') );?></h6>
 
     <?php the_excerpt(); ?>
 

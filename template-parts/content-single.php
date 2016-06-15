@@ -27,7 +27,7 @@
         ?> 
 
         <div class="post-info">
-            <span class="pull-left"><?php echo esc_attr( get_the_date('M d Y') );?><?php _e('- POSTED BY','knr'); ?> <?php echo esc_html( get_the_author_meta('display_name') );?></span>
+            <span class="pull-left"><?php echo esc_attr( get_the_date('M d Y') );?> <?php _e('- POSTED BY','knr'); ?> <?php echo esc_html( get_the_author_meta('display_name') );?></span>
             
             <span class="pull-right"><i class="fa fa-tags"></i> <?php the_tags(); ?> &nbsp;<i class="fa fa-comments"></i> <?php comments_popup_link('zero comment','one comment', '% comments');?></span>
         </div>
