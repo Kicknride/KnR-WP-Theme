@@ -627,7 +627,7 @@ function knr_customizer_register( $wp_customize )
      
       $wp_customize->add_panel( 'layout', array(
         'priority' => 160,
-        'title' => __( 'knr Sidebar Layout', 'knr' ),
+        'title' => __( 'KnR Sidebar Layout', 'knr' ),
         'description' => __( 'Theme Sidebar Layout', 'knr' ),
       ));
 
@@ -751,7 +751,7 @@ function knr_customizer_register( $wp_customize )
       /******** About knr *********/
       /**********************************************/    
   $wp_customize->add_section('knr_about_section', array(    
-    'title'       => __('About knr Theme', 'knr'),
+    'title'       => __('About KnR Theme', 'knr'),
     'priority' => 400,    
   ));
 
