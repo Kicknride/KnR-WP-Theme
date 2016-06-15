@@ -15,7 +15,7 @@
 	} );
 	wp.customize( 'blogdescription', function( value ) {
 		value.bind( function( to ) {
-			$( '.logo.h6.slogan' ).text( to );
+			$( '.logo h6.slogan' ).text( to );
 		} );
 	} );
 

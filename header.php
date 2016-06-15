@@ -33,7 +33,7 @@
                     <?php else : ?>
                         <h1><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>                            
                     <?php endif; ?>
-                    <h6 class="slogon"><?php bloginfo('description'); ?></h6>
+                    <h6 class="slogan"><?php bloginfo('description'); ?></h6>
       			</div>
     		</div> <!-- /.end of col-sm-3 -->
 
