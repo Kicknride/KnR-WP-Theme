@@ -404,7 +404,7 @@ msgid "Latest Post Title"
 msgstr ""
 
 #: inc/customizer.php:333
-msgid "Enable/Disable Latest Post Section."
+msgid "Enable/Disable Latest Post Section"
 msgstr ""
 
 #: inc/customizer.php:347
@@ -420,7 +420,7 @@ msgid "Our Works Title"
 msgstr ""
 
 #: inc/customizer.php:391
-msgid "Enable/Disable Our Works Section."
+msgid "Enable/Disable Our Works Section"
 msgstr ""
 
 #: inc/customizer.php:406
