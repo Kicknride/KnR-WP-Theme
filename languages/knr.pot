@@ -329,7 +329,7 @@ msgstr ""
 
 #:inc/customizer.php:88
 msgid "Select Number of Post"
-msgstr""
+msgstr ""
 
 #: inc/customizer.php:109
 msgid "Contact Us Link"
