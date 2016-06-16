@@ -24,6 +24,7 @@ Smart Menu : http://www.smartmenus.org/
 Font Awesome :Font-Awesome https://github.com/FortAwesome/Font-Awesome [MIT](http://opensource.org/licenses/MIT)- by @davegandy
 Based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 Bootstrap: http://getbootstrap.com/  licensed MIT, docs CC BY 3.0.
+Sliders Image: https://www.kicknride.fr licensed CC BY SA
 
 == INSTALLATION ==
 	
