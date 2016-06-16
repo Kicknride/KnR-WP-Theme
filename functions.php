@@ -490,7 +490,24 @@ if ( ! function_exists( 'knr_fonts_url' ) ) :
 	 */
 function knr_fonts_url() {
 
-wp_enqueue_style( 'knr-google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300', false ); 
+//wp_enqueue_style( 'knr-google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300', false ); 
+		$fonts_url = '';
+		$fonts     = array();
+		$subsets   = 'latin';
+
+		/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
+		if ( 'off' !== _x( 'on', 'Russo One font: on or off', 'flatter' ) ) {
+			$fonts[] = 'Russo One:400';
+		}
+
+		if ( $fonts ) {
+			$fonts_url = add_query_arg( array(
+				'family' => urlencode( implode( '|', $fonts ) ),
+				'subset' => urlencode( $subsets ),
+			), 'https://fonts.googleapis.com/css' );
+		}
+
+		return $fonts_url;
 }
 
 add_action( 'wp_enqueue_scripts', 'knr_fonts_url' );

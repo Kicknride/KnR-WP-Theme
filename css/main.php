@@ -582,7 +582,8 @@ section {
 .logo-menu .logo {float: left; padding: 15px 0; position: relative; z-index: 999; }
 .logo-menu .logo img {max-width: 150px; }
 .logo h1{font-size: 2em; margin: -3px 0px 0px; padding:4px 0px 0px;}
-.logo a, .logo a:hover {color: #<?php echo $theme_color; ?>; margin: 0; padding: 0; text-transform: uppercase;}
+ .logo a, .logo a:hover {font-size: 46px;color: #<?php echo $theme_color; ?>; margin: 0; padding: 0; text-transform: none; font-family: 'Russo One';}
+/*.logo a, .logo a:hover {font-size: 46px; color: #<?php echo $theme_color; ?>; margin: 0; padding: 0; text-transform: none; font-family: 'Russo One'; }*/
 .logo-menu .logo .slogan {
     color: #666;
     font-size: 11px;
