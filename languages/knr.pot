@@ -340,7 +340,11 @@ msgid "Features Categories"
 msgstr ""
 
 #: inc/customizer.php:124
-msgid "Select the Features Category for Homepage."
+msgid "Select the Features Content Category."
+msgstr ""
+
+#: inc/customizer.php:124
+msgid "Select the Services Category for Homepage."
 msgstr ""
 
 #: inc/customizer.php:754
