@@ -3,6 +3,10 @@ Changelog
 Tested up to: 4.5
 
 
+Version 0.0.2
+i)      Set Russo font for main title
+ii)     Use Header text color for Color Theme
+
 Version 0.0.1
     Initialise Fork
 
