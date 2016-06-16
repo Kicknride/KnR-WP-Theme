@@ -158,7 +158,7 @@ get_header(); ?>
 	        <div class="row">
 	            <div class="col-sm-12">
 	                <div class="section-title">
-	                    <h3><?php echo esc_attr(get_theme_mod( 'services_title', 'Our Service','knr' )); ?></h3>
+	                    <h3><?php echo esc_attr(get_theme_mod( 'services_title', __('Our Services','knr') )); ?></h3>
 	                    <div class="underline"></div>
 	                </div>
 	            </div>
