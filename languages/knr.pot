@@ -343,6 +343,10 @@ msgstr ""
 msgid "Select the Features Category for Homepage."
 msgstr ""
 
+#: inc/customizer.php:754
+msgid "About KnR Theme"
+msgstr ""
+
 #: inc/customizer.php:147
 msgid "Enable/Disable Featured Content"
 msgstr ""
