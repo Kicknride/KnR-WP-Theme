@@ -45,6 +45,7 @@ get_header(); ?>
 
 	          
 	            if ($loop->have_posts()) :  while ($loop->have_posts()) : $loop->the_post();
+                        $slider_num = $slider_num +1;
 	          ?>
             
             <div class="item">
@@ -52,7 +53,7 @@ get_header(); ?>
             	<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'knr-slider-thumb' ); ?>
 				<div class="fill" style="background-image: url( <?php if ( has_post_thumbnail() ) {
 					echo $image[0]; } else { ?>
-				<?php echo esc_url( get_template_directory_uri());?>/images/slider1.jpg <?php } ?> )">
+				<?php echo esc_url( get_template_directory_uri());?>/images/slider<?php echo $slider_num; ?>.jpg <?php } ?> )">
                 </div>
                 
                 <div class="carousel-caption outer">
