@@ -1750,6 +1750,38 @@ html, body {height: 100%; }
 .posted-on {display: block; padding-bottom: 8px;}
 .entry-footer span {margin-right: 15px;}
 
+.content h1 {
+  font-size: 2.5em;
+  margin: 1.5em 0 1em 0;
+  padding: 0.25em 0 0.5em 0;
+  border-top: 3px solid #<?php echo $theme_color; ?>;
+/*  border-radius: 3px 3px 0 0;*/
+}
+
+.content blockquote.knr-info {
+  padding-left: 100px;
+  border-top: 4px solid green;
+}
+
+.content blockquote.knr-alert {
+  padding-left: 100px;
+  border-top: 4px solid #ff9000;
+}
+
+.content blockquote.knr-danger {
+  padding-left: 100px;
+  border-top: 4px solid #ff0000;
+}
+
+.content blockquote.sommaire {
+    font-style: normal;
+    padding-left: 50px;
+    border: none;
+    background: rgba(204, 51, 0, 0.025);
+    padding-bottom: 0.001em;
+    border-radius: 4px 4px 4px 4px; 
+
+}
 
 
 /*--------------------------------------------------------------

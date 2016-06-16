@@ -3,7 +3,8 @@ Changelog
 Tested up to: 4.5
 
 Version 0.0.3
-i)      Add slider2.jpg
+i)      Add slider 2 to 9 .jpg
+ii)     Add some css
 
 Version 0.0.2
 i)      Set Russo font for main title
