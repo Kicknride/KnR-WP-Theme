@@ -19,7 +19,7 @@ get_header(); ?>
 	        <div class="row">
 	            <div class="col-sm-12">
 	                <div class="block">
-	                    <h2 class="page-title" style="color:#<?php echo header_textcolor(); ?>"><?php _e('Welcome to ','knr'); echo bloginfo('title'); ?></h2>
+	                    <h2 class="page-title" style="color:#<?php echo header_textcolor(); ?>"><?php _e('Welcome to','knr'); echo ' '; echo bloginfo('title'); ?></h2>
 	                    <div class="underline"></div>
 	                    <?php knr_breadcrumbs(); ?>
 	                </div>
