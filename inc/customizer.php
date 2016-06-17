@@ -450,7 +450,7 @@ function knr_customizer_register( $wp_customize )
           array(
             'sanitize_callback' => 'knr_sanitize_text',
             'capability' => 'edit_theme_options',
-            'default' => '&copy; 2016. Kick\'n Ride. All Rights Reserved.',
+            'default' => "&copy; 2016. Kick'n Ride. All Rights Reserved.",
           )
       );
 

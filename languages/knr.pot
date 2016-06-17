@@ -108,7 +108,7 @@ msgid "Toggle navigation"
 msgstr ""
 
 #: footer.php: 52
-msgid "&copy; 2016. Kick\'n Ride. All Rights Reserved."
+msgid "&copy; 2016. Kick'n Ride. All Rights Reserved."
 msgstr ""
 
 #: footer.php: 58
@@ -119,13 +119,10 @@ msgstr ""
 msgid "Proudly powered by %s"
 msgstr ""
 
-#. translators: 1: knr, 2:https://www.kicknride.fr
-#: comments.php:53
-msgctxt "THEME: KNR-WP-THEME BY KICK'N RIDE"
+#: footer.php: 60
 msgid "Theme: %1$s by %2$s."
-msgid_plural "Theme: %1$s by %2$s."
-msgstr[0] ""
-msgstr[1] ""
+msgstr ""
+
 
 #: template-parts/content-page.php:34
 msgid "Page"
