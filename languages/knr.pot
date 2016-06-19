@@ -1,186 +1,130 @@
-# Copyright (C) 2016 Kick'n Ride
-# This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: KnR 0.0.1\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/knr\n"
-"POT-Creation-Date: 2016-02-08 21:51:31+0000\n"
+"Project-Id-Version: KnR\n"
+"POT-Creation-Date: 2016-06-18 21:56+0100\n"
+"PO-Revision-Date: 2016-06-19 08:55+0100\n"
+"Last-Translator: Cyrille Hamel <cyrille.hamel@kicknride.fr>\n"
+"Language-Team: Kick'n Ride <cyrille.hamel@kicknride.fr>\n"
+"Language: English\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kick'n Ride <cyrille.hamel@kicknride.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e;_ex;_n;_n_noop;_nx;_nx_noop;_x;esc_attr__;"
+"esc_attr_e;esc_attr_x;esc_html__;esc_html_e;esc_html_x\n"
+"X-Poedit-Basepath: /media/cyrille/DATA/Devel/Web/WP Plugins/Themes/KnR-WP-Theme\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
 
 #: 404.php:17
 msgid "404 Not Found."
 msgstr ""
 
+#: 404.php:31 archive.php:33 page.php:38 search.php:34 single.php:34
+msgid "right"
+msgstr ""
+
+#: 404.php:45
+msgid "404"
+msgstr ""
 
 #: 404.php:46
 msgid "Oops, this page could not be found!"
 msgstr ""
 
 #: 404.php:47
-msgid "It looks like nothing was found at this location. Maybe you can search ?"
+msgid "It looks like nothing was found at this location. Maybe you can search"
 msgstr ""
-
 
 #. translators: %s: post title
 #: comments.php:33
-msgctxt "comments title"
+#, php-format
 msgid "One thought on &ldquo;%s&rdquo;"
 msgstr ""
 
 #. translators: 1: number of comments, 2: post title
-#: comments.php:37
+#: comments.php:38
+#, php-format
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
+#. Are there comments to navigate through?
 #: comments.php:53
-msgid "Comment navigation."
+msgid "Comment navigation"
 msgstr ""
 
 #: comments.php:56
-msgid "Older Comments."
+msgid "Older Comments"
 msgstr ""
 
 #: comments.php:57
-msgid "Newer Comments."
+msgid "Newer Comments"
 msgstr ""
-
 
 #: comments.php:78
 msgid "Comments are closed."
 msgstr ""
 
-#: index.php:22
-msgid "Welcome to"
-msgstr ""
 
-#: search.php:19
-msgid "Search Results for: %s"
-msgstr ""
-
-#: searchform.php:4
-msgctxt "placeholder"
-msgid "Search this blog"
-msgstr ""
-
-#: searchform.php:4
-msgctxt "label"
-msgid "Search for:"
-msgstr ""
-
-#: template-blog.php:55 template-parts/content-single.php:30 template-parts/content-search.php:22 template-parts/content.php:21
-msgid "- Posted by"
-msgstr ""
-
-#: template-blog.php:58 template-home.php:64 template-home:194 template-home:334 template-home:405 template-parts/content-search.php:26 template-parts/content.php:25
-msgid "Read More"
-msgstr ""
-
-#: template-home.php:62
-msgid "Contact Us"
-msgstr ""
-
-#: template-home.php:157
-msgid "Our Services"
-msgstr ""
-
-#: template-home.php:226
-msgid "Testimonials"
-msgstr ""
-
-#: template-home.php:365
-msgid "Latest Post"
-msgstr ""
-
-#: template-home.php:358
-msgid "Our Works"
-msgstr ""
-
-#: header.php: 45
-msgid "Toggle navigation"
-msgstr ""
-
-#: footer.php: 52
+#: footer.php:52
 msgid "&copy; 2016. Kick'n Ride. All Rights Reserved."
 msgstr ""
 
-#: footer.php: 58
+#: footer.php:58
 msgid "https://wordpress.org/"
 msgstr ""
 
-#: footer.php: 58
+#: footer.php:58
+#, php-format
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: footer.php: 60
+#: footer.php:60
+#, php-format
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-
-#: template-parts/content-page.php:34
-msgid "Page"
-msgstr ""
-
-#: template-parts/content-single.php:30
-msgid "- POSTED BY"
-msgstr ""
-
-#: template-parts/content-single.php:42
-msgid "Page"
-msgstr ""
-
-#: template-parts/content-single.php:65
-msgid"Edit %s"
-msgstr""
-
-#. translators: %s: Name of current post
-#: template-parts/content-page.php:62 template-parts/content-single.php:70 inc/template-tags.php:71
-msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
-
-#: template-parts/content-none.php:14
-msgid "Nothing Found"
-msgstr ""
-
-#: template-parts/content-none.php:19
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-
-#: template-parts/content-none.php:23
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-
-#: template-parts/content-none.php:31
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+#: footer.php:60
+msgid "https://www.kicknride.fr"
 msgstr ""
 
 #: functions.php:60
 msgid "Primary Menu"
 msgstr ""
 
-
-
-#: functions.php:226
-msgid 'Sticky'
+#: functions.php:173
+msgid "<span aria-hidden=\"true\">&laquo;</span>"
 msgstr ""
 
-#: functions.php:232 functions.php:238 inc/template-tags.php 50 inc/template-tags.php 56
-msgid ","
+#: functions.php:174
+msgid "<span aria-hidden=\"true\">&raquo;</span>"
+msgstr ""
+
+#: functions.php:210
+msgid "<i class=\"fa fa-angle-left\"></i> Previous"
+msgstr ""
+
+#: functions.php:211
+msgid "Next <i class=\"fa fa-angle-right\"></i>"
+msgstr ""
+
+#: functions.php:226
+msgid "Sticky"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: functions.php:232 functions.php:238 inc/template-tags.php:50
+#: inc/template-tags.php:56
+msgid ", "
 msgstr ""
 
 #: functions.php:247
+#, php-format
 msgid "View all posts by %s"
 msgstr ""
 
@@ -188,108 +132,112 @@ msgstr ""
 msgid "Reply"
 msgstr ""
 
-#: functions.php:405
-msgid "Category Left Sidebar"
-msgstr ""
-
-#: functions.php:407
-msgid "Drag your widgets for Left Sidebar here"
-msgstr ""
-
-#: functions.php:395
+#: functions.php:416
 msgid "Category Right Sidebar"
 msgstr ""
 
-#: functions.php:397
+#: functions.php:418
 msgid "Drag your widgets for Right Sidebar here"
 msgstr ""
 
-#: functions.php:415
+#: functions.php:426
+msgid "Category Left Sidebar"
+msgstr ""
+
+#: functions.php:428
+msgid "Drag your widgets for Left Sidebar here"
+msgstr ""
+
+#: functions.php:436
 msgid "Shop Sidebar Left"
 msgstr ""
 
-#: functions.php:417
+#: functions.php:438
 msgid "Drag your Woo-commerce Porducts widgets here"
 msgstr ""
 
-#: functions.php:425
+#: functions.php:447
 msgid "Footer Block"
 msgstr ""
 
-#: functions.php:427
+#: functions.php:449
 msgid "Footer Block supports 4 widgets here"
 msgstr ""
 
-#: functions.php:435
+#: functions.php:457
 msgid "Newsletter Block"
 msgstr ""
 
-#: functions.php:437
+#: functions.php:459
 msgid "Install https://wordpress.org/plugins/newsletter/ to use this section"
 msgstr ""
 
-#: functions.php:445
+#: functions.php:467
 msgid "Contact Block"
 msgstr ""
 
-#: functions.php:447
+#: functions.php:469
 msgid "Paste your Google Map Location iFrame code here"
 msgstr ""
 
-#. translators: If there are characters in your language that are not supported
-#. by Open Sans, translate this to 'off'. Do not translate into your own
-#. language.
-#: functions.php:500
-msgctxt "Open Sans font: on or off"
+#. translators: If there are characters in your language that are not supported by Open Sans, translate this to 'off'. Do not translate into your own language.
+#: functions.php:499
 msgid "on"
+msgstr ""
+
+msgid "Toggle navigation"
+msgstr ""
+
+#: index.php:22
+msgid "Welcome to"
+msgstr ""
+
+#: search.php:20
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:4
+msgid "Search this blog"
+msgstr ""
+
+#: searchform.php:4
+msgid "Search for:"
+msgstr ""
+
+#. Start the Loop
+#: template-blog.php:55
+msgid "- Posted by"
+msgstr ""
+
+#: template-blog.php:58 template-home.php:68 template-home.php:198
+#: template-home.php:338 template-home.php:409
+#: template-parts/content-search.php:26 template-parts/content.php:25
+msgid "Read More"
+msgstr ""
+
+#: template-home.php:66
+msgid "Contact Us"
+msgstr ""
+
+#: template-home.php:161
+msgid "Our Services"
+msgstr ""
+
+#: template-home.php:230
+msgid "Testimonials"
+msgstr ""
+
+#: template-home.php:294
+msgid "Latest Post"
+msgstr ""
+
+#: template-home.php:369
+msgid "Our Works"
 msgstr ""
 
 #: inc/class.php:43
 msgid "Select"
-msgstr ""
-
-#: inc/extras.php:65
-msgid "Submit"
-msgstr ""
-
-#: inc/extras.php:80
-msgid "Developed By:"
-msgstr ""
-
-#: inc/extras.php:81
-msgid "Kick\'n Ride Themes"
-msgstr ""
-
-#: inc/extras.php:93
-msgid"CLick Here"
-msgstr""
-
-#: inc/template-tags.php:28
-msgctxt "post date"
-msgid "Posted on %s"
-msgstr ""
-
-#: inc/template-tags.php:33
-msgctxt "post author"
-msgid "by %s"
-msgstr ""
-
-#. translators: 1: number of comments
-#: inc/template-tags.php:52
-msgctxt "Categories list"
-msgid "Posted in %1$s"
-msgid_plural "Posted in %1$s"
-msgstr[0] ""
-
-#. translators: 1: number of comments
-#: inc/template-tags.php:58
-msgctxt "Tags list"
-msgid "Tagged %1$s"
-msgid_plural "Tagged %1$s"
-msgstr[0] ""
-
-#: inc/template-tags.php:64
-msgid "Leave a comment"
 msgstr ""
 
 #: inc/customizer.php:29
@@ -300,18 +248,6 @@ msgstr ""
 msgid "Welcome to KnR Theme Option."
 msgstr ""
 
-#: inc/customizer.php:39
-msgid "Theme Logo"
-msgstr ""
-
-#: inc/customizer.php:41
-msgid "Upload image of 200px width and 52px height for logo"
-msgstr ""
-
-#: inc/customizer.php:51
-msgid "Edit Theme Logo"
-msgstr ""
-
 #: inc/customizer.php:62
 msgid "Slider Categories"
 msgstr ""
@@ -320,11 +256,12 @@ msgstr ""
 msgid "Select the Slide Category for Homepage."
 msgstr ""
 
-#: inc/customizer.php:75 inc/customizer.php:135 inc/customizer.php:193 inc/customizer.php:251 inc/customizer.php:320 inc/customizer.php:379
+#: inc/customizer.php:75 inc/customizer.php:135 inc/customizer.php:193
+#: inc/customizer.php:251 inc/customizer.php:320 inc/customizer.php:379
 msgid "Choose category"
 msgstr ""
 
-#:inc/customizer.php:88
+#: inc/customizer.php:88
 msgid "Select Number of Post"
 msgstr ""
 
@@ -340,14 +277,6 @@ msgstr ""
 msgid "Select the Features Content Category."
 msgstr ""
 
-#: inc/customizer.php:124
-msgid "Select the Services Category for Homepage."
-msgstr ""
-
-#: inc/customizer.php:754
-msgid "About KnR Theme"
-msgstr ""
-
 #: inc/customizer.php:147
 msgid "Enable/Disable Featured Content"
 msgstr ""
@@ -357,7 +286,7 @@ msgid "Services Categories"
 msgstr ""
 
 #: inc/customizer.php:163
-msgid "Select the Services Category for Homepage"
+msgid "Select the Services Category for Homepage."
 msgstr ""
 
 #: inc/customizer.php:179
@@ -420,122 +349,203 @@ msgstr ""
 msgid "Enable/Disable Our Works Section"
 msgstr ""
 
-#: inc/customizer.php:406
+#: inc/customizer.php:404
 msgid "Newsletter Section"
 msgstr ""
 
-#: inc/customizer.php:408
+#: inc/customizer.php:406
 msgid "Write Some Words for Newsletter Section in Homepage.install Newsletter plugin to use this section"
 msgstr ""
 
-#: inc/customizer.php:424
+#: inc/customizer.php:422
 msgid "Newsletter Textbox"
 msgstr ""
 
-#: inc/customizer.php:439
+#: inc/customizer.php:436
 msgid "Footer Settings"
 msgstr ""
 
-#: inc/customizer.php:441
+#: inc/customizer.php:438
 msgid "Customize your Footer section."
 msgstr ""
 
-#: inc/customizer.php:463
+#: inc/customizer.php:460
 msgid "Copyright text"
 msgstr ""
 
-#: inc/customizer.php:482
+#: inc/customizer.php:479
 msgid "Show social icons"
 msgstr ""
 
-#: inc/customizer.php:506
+#: inc/customizer.php:503
 msgid "Facebook"
 msgstr ""
 
-#: inc/customizer.php:525
+#: inc/customizer.php:522
 msgid "Twitter"
 msgstr ""
 
-#: inc/customizer.php:544
+#: inc/customizer.php:541
 msgid "Googleplus"
 msgstr ""
 
-#: inc/customizer.php:563
+#: inc/customizer.php:560
 msgid "YouTube"
 msgstr ""
 
-#: inc/customizer.php:582
+#: inc/customizer.php:579
 msgid "Linkedin"
 msgstr ""
 
-
-#: inc/customizer.php:595
-msgid "KnR Sidebar Layout"
+#: inc/customizer.php:598
+msgid "GitHub"
 msgstr ""
 
-#: inc/customizer.php:596
-msgid "Theme Sidebar Layout"
-msgstr ""
-
-#: inc/customizer.php:600
-msgid "Category Sidebar"
-msgstr ""
-
-#: inc/customizer.php:612
-msgid "Sidebar position"
+#: inc/customizer.php:617
+msgid "Instagram"
 msgstr ""
 
 #: inc/customizer.php:630
+msgid "KnR Sidebar Layout"
+msgstr ""
+
+#: inc/customizer.php:631
+msgid "Theme Sidebar Layout"
+msgstr ""
+
+#: inc/customizer.php:635
+msgid "Category Sidebar"
+msgstr ""
+
+#: inc/customizer.php:647
+msgid "Sidebar position"
+msgstr ""
+
+#: inc/customizer.php:665
 msgid "Single Post Sidebar"
 msgstr ""
 
-#: inc/customizer.php:643
+#: inc/customizer.php:678
 msgid "Single Post Sidebar position"
 msgstr ""
 
-#: inc/customizer.php:661
+#: inc/customizer.php:696
 msgid "Single Page Sidebar"
 msgstr ""
 
-#: inc/customizer.php:674
+#: inc/customizer.php:709
 msgid "Single Page Sidebar position"
 msgstr ""
 
-#: inc/customizer.php:691
+#: inc/customizer.php:726
 msgid "Search Page Sidebar"
 msgstr ""
 
-#: inc/customizer.php:704
+#: inc/customizer.php:739
 msgid "Search Page Sidebar position"
 msgstr ""
 
-#: inc/customizer.php:746
+#: inc/customizer.php:754
+msgid "About KnR Theme"
+msgstr ""
+
+#: inc/customizer.php:769
+msgid "Important Links"
+msgstr ""
+
+#: inc/customizer.php:781
 msgid "Page Not Found Sidebar"
 msgstr ""
 
-#: inc/customizer.php:759
+#: inc/customizer.php:794
 msgid "Page Not Found Sidebar position"
 msgstr ""
 
-#. Theme Name of the theme
-msgid "KnR"
+#: inc/extras.php:65
+msgid "Submit"
 msgstr ""
 
-#. Theme URI of the theme
-msgid "https://github.com/Kicknride/KnR-WP-Theme"
+#: inc/extras.php:80
+msgid "Developed By: "
 msgstr ""
 
-#. Description of the plugin/theme
-msgid ""
-"KnR is a multipurpose Free WordPress Theme."
-"It consists of Featured Slider, Featured Posts, Services Posts, Testimonial Posts, Latest Posts, your Works Posts, Newsletter Subscription Widget, Social Icons and four widgetized Footer blocks in Homepage layout."
-"You can choose multiple sidebar option on blog, single post, single page, search page, page not found page as Left Sidebar, Right Sidebar and Both Sidebar as per requirements. These all options can be optimized from the Theme Options of Customize."
-Fullwidth Page, Fullwidth Blog with Masonry layout and Woocommerce Ready within the theme."
-"What are you waiting for? Lets start downloading this amazing and beautiful Free Multipurpose WordPress Theme right away."
-"Read the theme documentation for detail usage of theme attached within this theme as readme.txt file."
-
+#: inc/extras.php:81
+msgid "Kick'n Ride Themes"
 msgstr ""
 
-#. Author of the Theme
-msgid "Kick\'n Ride"
+#: inc/extras.php:98
+msgid "Rate Theme: "
+msgstr ""
+
+#: inc/extras.php:99
+msgid "Click Here"
+msgstr ""
+
+#: inc/template-tags.php:28
+#, php-format
+msgid "Posted on %s"
+msgstr ""
+
+#: inc/template-tags.php:33
+#, php-format
+msgid "by %s"
+msgstr ""
+
+#. translators: 1: number of comments
+#: inc/template-tags.php:52
+msgctxt "Categories list"
+msgid "Posted in %1$s"
+msgid_plural "Posted in %1$s"
+msgstr[0] ""
+
+#. translators: 1: number of comments
+#: inc/template-tags.php:58
+msgctxt "Tags list"
+msgid "Tagged %1$s"
+msgid_plural "Tagged %1$s"
+msgstr[0] ""
+
+#: inc/template-tags.php:64
+msgid "Leave a comment"
+msgstr ""
+
+#: inc/template-tags.php:64
+msgid "1 Comment"
+msgstr ""
+
+#: inc/template-tags.php:64
+msgid "% Comments"
+msgstr ""
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:71 template-parts/content-page.php:62
+#: template-parts/content-single.php:65
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:19
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:23
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:31
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:34 template-parts/content-single.php:42
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-search.php:22 template-parts/content-single.php:30
+#: template-parts/content.php:21
+msgid "- POSTED BY"
 msgstr ""

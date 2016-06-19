@@ -495,7 +495,7 @@ function knr_fonts_url() {
 		$fonts     = array();
 		$subsets   = 'latin';
 
-		/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
+		/* translators: If there are characters in your language that are not supported by Open Sans, translate this to 'off'. Do not translate into your own language. */
 		if ( 'off' !== _x( 'on', 'Russo One font: on or off', 'flatter' ) ) {
 			$fonts[] = 'Russo One:400';
 		}
