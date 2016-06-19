@@ -36,11 +36,11 @@ function knr_comment_form_fields( $fields ) {
     
     $fields   =  array(
         'author' => '<div class="col-sm-12 form-group comment-form-author">' . 
-                    '<input class="form-control" id="author" name="author" type="text" placeholder="* Full Name" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div>',
+                    '<input class="form-control" id="author" name="author" type="text" placeholder="'. __( '* Full Name','knr') .'" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div>',
         'email'  => '<div class="col-sm-12 form-group comment-form-email">'.
-                    '<input class="form-control" id="email" placeholder="* Email Address" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div>',
+                    '<input class="form-control" id="email" placeholder="'. __( '* Email Address','knr') .'" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div>',
         'url'    => '<div class=" col-sm-12 form-group comment-form-url">' .
-                    '<input class="form-control" id="url" placeholder="Website" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div>'        
+                    '<input class="form-control" id="url" placeholder="'. __( 'Website','knr') .'" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div>'        
     );
     
     return $fields;
@@ -50,7 +50,7 @@ function knr_comment_form_fields( $fields ) {
 
 add_filter( 'comment_form_defaults', 'knr_comment_form' );
 function knr_comment_form( $args ) {
-    $args['comment_field'] = '<div class="col-sm-12 form-group comment-form-comment">'.'<textarea class="form-control" id="comment" placeholder="Write your comment.." name="comment" cols="45" rows="8" aria-required="true"></textarea>
+    $args['comment_field'] = '<div class="col-sm-12 form-group comment-form-comment">'.'<textarea class="form-control" id="comment" placeholder="'. __( 'Write your comment..','knr') .'" name="comment" cols="45" rows="8" aria-required="true"></textarea>
         </div>';
     $args['class_submit'] = 'btn btn-theme'; // since WP 4.1
     

@@ -14,7 +14,6 @@ msgstr ""
 "esc_attr_e;esc_attr_x;esc_html__;esc_html_e;esc_html_x\n"
 "X-Poedit-Basepath: /media/cyrille/DATA/Devel/Web/WP Plugins/Themes/KnR-WP-Theme\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
 
@@ -481,8 +480,25 @@ msgstr ""
 msgid "Click Here"
 msgstr ""
 
+#: inc/extras.php:39
+msgid "* Full Name"
+msgstr ""
+
+#: inc/extras.php:41
+msgid "* Email Address"
+msgstr ""
+
+#: inc/extras.php:43
+msgid "Website"
+msgstr ""
+
+#: inc/extras.php:53
+msgid "Write your comment.."
+msgstr ""
+
 #: inc/template-tags.php:28
 #, php-format
+msgctxt "Post date"
 msgid "Posted on %s"
 msgstr ""
 
