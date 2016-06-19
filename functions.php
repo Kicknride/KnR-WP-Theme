@@ -544,7 +544,7 @@ function knr_scripts() {
 	wp_enqueue_style( 'animate-min', get_template_directory_uri().'/css/animate.css' );
 	wp_enqueue_style( 'owl-carousel', get_template_directory_uri().'/css/owl.carousel.css' );
 	wp_enqueue_style( 'owl-theme', get_template_directory_uri().'/css/owl.theme.css' );
-	wp_enqueue_style( 'knr-main', get_template_directory_uri().'/css/main.css?theme_color='.get_header_textcolor() );	
+	wp_enqueue_style( 'knr-main', get_template_directory_uri().'/css/main.php?theme_color='.get_header_textcolor() );	
 	wp_enqueue_style( 'knr-responsive', get_template_directory_uri().'/css/responsive.css' );
 	
 	
