@@ -2,6 +2,9 @@ Changelog
 
 Tested up to: 4.5
 
+Version 0.0.4
+i)      Adjust typo and code for better translation
+
 Version 0.0.3
 i)      Add slider 2 to 9 .jpg
 ii)     Add some css
