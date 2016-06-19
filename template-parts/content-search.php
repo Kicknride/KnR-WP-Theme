@@ -27,7 +27,7 @@
     
     <div class="tag-comment">
         <span class="pull-left"><i class="fa fa-tags"></i> <?php the_tags(); ?></span>
-        <span class="pull-right"><i class="fa fa-comments"></i> <?php comments_popup_link('0 comment','one comment', '% comments');?></span>
+        <span class="pull-right"><i class="fa fa-comments"></i> <?php comments_popup_link(__('0 comment','knr'),__('one comment','knr'), __('% comments','knr'));?></span>
     </div>
 	
 </div>

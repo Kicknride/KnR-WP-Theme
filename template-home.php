@@ -330,7 +330,7 @@ get_header(); ?>
 	                    <div class="content">
 	                    	<div class="post-info">
 	                    		<span class="pull-left"><i class="fa fa-calendar"></i> <?php echo esc_attr( get_the_date('d M Y') ) ;?></span>
-	                    		<span class="pull-right"><i class="fa fa-comments"></i> &nbsp; <?php comments_popup_link('0 comment','one comment', '% comments');?></span>
+	                    		<span class="pull-right"><i class="fa fa-comments"></i> &nbsp; <?php comments_popup_link(__('0 comment','knr'),__('one comment','knr'), __('% comments','knr'));?></span>
 	                    	</div>
 
 	                        <h3 class="block-title"><?php the_title();?></h3>

@@ -209,6 +209,22 @@ msgstr ""
 msgid "- Posted by"
 msgstr ""
 
+#: content-single.php:32
+msgid "zero comment"
+msgstr ""
+
+#: template-blog.php:62 content.php:30 template-home.php:333 content-search.php:30
+msgid "0 comment"
+msgstr ""
+
+#: template-blog.php:62 content.php:30 template-home.php:333 content-search.php:30
+msgid "one comment"
+msgstr ""
+
+#: template-blog.php:62 content.php:30 template-home.php:333 content-search.php:30
+msgid "% comments"
+msgstr ""
+
 #: template-blog.php:58 template-home.php:68 template-home.php:198
 #: template-home.php:338 template-home.php:409
 #: template-parts/content-search.php:26 template-parts/content.php:25
