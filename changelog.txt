@@ -2,9 +2,6 @@ Changelog
 
 Tested up to: 4.5
 
-Version 0.0.5
-i)      Adjust some css code
-
 Version 0.0.4
 i)      Adjust typo and code for better translation
 
