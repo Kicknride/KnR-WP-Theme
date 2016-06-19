@@ -207,8 +207,8 @@ if ( ! function_exists( 'knr_post_nav' ) ) :
 		<nav>
             <ul class="pager">                    
 			<?php
-				previous_post_link( '<li class="previous">%link</li>', _x( '<i class="fa fa-angle-left"></i> Previous', 'Previous post link', 'knr' ) );
-				next_post_link(     '<li class="next">%link</li>',     _x( 'Next <i class="fa fa-angle-right"></i>',    'Next post link',     'knr' ) );
+				previous_post_link( '<li class="previous">%link</li>', __( '<i class="fa fa-angle-left"></i> Previous', 'knr' ) );
+				next_post_link(     '<li class="next">%link</li>',     __( 'Next <i class="fa fa-angle-right"></i>',     'knr' ) );
 			?>
 			</ul>
 		</nav><!-- .nav-links -->
