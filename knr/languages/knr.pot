@@ -429,7 +429,7 @@ msgid "Theme Sidebar Layout"
 msgstr ""
 
 #: inc/customizer.php:635
-msgid "Category Sidebar"
+msgid "Blog Sidebar"
 msgstr ""
 
 #: inc/customizer.php:647

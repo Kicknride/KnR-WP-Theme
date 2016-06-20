@@ -632,7 +632,7 @@ function knr_customizer_register( $wp_customize )
       ));
 
       $wp_customize->add_section('sidebar' , array(
-        'title' => __('Category Sidebar','knr'),
+        'title' => __('Blog Sidebar','knr'),
         'capability' => 'edit_theme_options',
         'panel' => 'layout'
       ));
