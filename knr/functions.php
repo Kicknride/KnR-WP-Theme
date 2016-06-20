@@ -115,7 +115,7 @@ add_theme_support( 'custom-logo', array(
 	) );
 
 
-// =========================== KNR-WP-THEME BREADCRUMBS ========================== //
+// =========================== KNR BREADCRUMBS ========================== //
 if ( ! function_exists( 'knr_breadcrumbs' ) ) :
 function knr_breadcrumbs() {
 	if(!is_home()) {
@@ -136,7 +136,7 @@ function knr_breadcrumbs() {
 endif;
 
 
-// =========================== KNR-WP-THEME PAGINATION BARS ========================== //
+// =========================== KNR PAGINATION BARS ========================== //
 if ( ! function_exists( 'knr_pagination_bars' ) ) :
 	/**
 	 * Display navigation to next/previous set of posts when applicable.
@@ -189,7 +189,7 @@ endif;
 
 
 
-// =========================== KNR-WP-THEME POST NAVIGATION ========================== //
+// =========================== KNR POST NAVIGATION ========================== //
 if ( ! function_exists( 'knr_post_nav' ) ) :
 	/**
 	 * Display navigation to next/previous post when applicable.
@@ -219,7 +219,7 @@ endif;
 
 
 
-// =========================== KNR-WP-THEME ENTRY META ========================== //
+// =========================== KNR ENTRY META ========================== //
 if ( ! function_exists( 'knr_entry_meta' ) ) :
 	function knr_entry_meta() {
 		if ( is_sticky() && is_home() && ! is_paged() )
@@ -255,7 +255,7 @@ endif;
 
 
 
-// =========================== KNR-WP-THEME GET LINK URL ========================== //
+// =========================== KNR GET LINK URL ========================== //
 if ( ! function_exists( 'knr_get_link_url' ) ) :
 function knr_get_link_url() {
 	$content = get_the_content();
@@ -269,7 +269,7 @@ endif;
 
 
 
-// ====================== KNR-WP-THEME TAG CLOUDS ARGUMENTS ========================== //
+// ====================== KNR TAG CLOUDS ARGUMENTS ========================== //
 add_filter( 'widget_tag_cloud_args', 'knr_tag_cloud_args' );
 function knr_tag_cloud_args( $args ) {
 	$args['number'] = 14; // Your extra arguments go here
@@ -288,7 +288,7 @@ function knr_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'knr_excerpt_length', 999 );
 
 
-// ========================= KNR-WP-THEME CUSTOM COMMENTS ========================== //
+// ========================= KNR CUSTOM COMMENTS ========================== //
 function knr_custom_comments( $comment, $args, $depth ) {
     $GLOBALS['comment'] = $comment;
     switch( $comment->comment_type ) :
@@ -340,7 +340,7 @@ function knr_custom_comments( $comment, $args, $depth ) {
 
 
 
-// ======================= KNR-WP-THEME POST THUMBNAIL CAPTION ====================== //
+// ======================= KNR POST THUMBNAIL CAPTION ====================== //
 function knr_the_post_thumbnail_caption() {
   global $post;
 
@@ -358,7 +358,7 @@ function knr_the_post_thumbnail_caption() {
 
 
 
-// ================ KNR-WP-THEME EDITOR STYLES FOR GOOGLE FONTS ================== //
+// ================ KNR EDITOR STYLES FOR GOOGLE FONTS ================== //
 function knr_add_editor_styles() {
 	$rep_lace=array("%2B", "%2C","%3A");
     $font_url = str_replace( $rep_lace, " ", "//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" );
@@ -371,7 +371,7 @@ add_action( 'after_setup_theme', 'knr_add_editor_styles' );
 
 
 
-// ================ KNR-WP-THEME WOO COMMERCE BREADCRUMB CUSTOMIZE ================== //
+// ================ KNR WOO COMMERCE BREADCRUMB CUSTOMIZE ================== //
 
 add_filter( 'woocommerce_breadcrumb_defaults', 'knr_breadcrumb_defaults');
 function knr_breadcrumb_defaults($defaults) {

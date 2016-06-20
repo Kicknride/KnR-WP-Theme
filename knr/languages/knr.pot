@@ -12,7 +12,7 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-KeywordsList: __;_e;_ex;_n;_n_noop;_nx;_nx_noop;_x;esc_attr__;"
 "esc_attr_e;esc_attr_x;esc_html__;esc_html_e;esc_html_x\n"
-"X-Poedit-Basepath: /media/cyrille/DATA/Devel/Web/WP Plugins/Themes/KnR-WP-Theme\n"
+"X-Poedit-Basepath: /media/cyrille/DATA/Devel/Web/WP Plugins/Themes/KnR-WP-Theme/knr\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
