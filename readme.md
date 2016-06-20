@@ -1,6 +1,6 @@
-================================================================================================
- 						***** KNR-WP-THEME THEME DOCUMENTATION *****
-================================================================================================
+================================================================================
+                ***** KNR-WP-THEME THEME DOCUMENTATION *****
+================================================================================
 
 Description: KnR is a multipurpose Free WordPress Theme. It consists of Featured Slider, Featured Posts, Services Posts, Testimonial Posts, Latest Posts, your Works Posts, Newsletter Subscription Widget, Social Icons and four widgetized Footer blocks in Homepage layout. You can choose multiple sidebar option on blog, single post, single page, search page, page not found page as Left Sidebar, Right Sidebar and Both Sidebar as per requirements. These all options can be optimized from the Theme Options of Customize. RTL Enable/Disable option is also available in Theme Options. Fullwidth Page, Fullwidth Blog with Masonry layout and Woocommerce Ready within the theme. What are you waiting for? Lets start downloading this amazing and beautiful Free Multipurpose WordPress Theme right away. Read the theme documentation for detail usage of theme attached within this theme as readme.txt.
 
