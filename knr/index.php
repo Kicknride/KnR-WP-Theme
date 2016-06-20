@@ -31,8 +31,20 @@ get_header(); ?>
 	<section class="inner-content">
     	<div class="container">
         	<div class="row">  		
-
-				<div class="col-md-9 detail-content">
+        		<?php
+					$class = 'col-md-6 col-sm-8';
+					$sidebar =  get_theme_mod('sidebar_position',__('right','knr') );
+					 if($sidebar != 'both'){
+						 $class = 'col-md-9';
+					}
+				?>          
+					
+				<?php
+				    if ($sidebar == 'left' || $sidebar == 'both'){ 
+				        get_sidebar('left');
+				       }
+				?>
+				<div class="<?php echo $class;?> detail-content">
 					<?php if ( have_posts() ) : ?>
 						<div class="masonry-3">
 							<?php if (! is_front_page() ) : ?>
@@ -67,7 +79,11 @@ get_header(); ?>
 					<?php endif; ?>
 				</div>
 
-				<?php get_sidebar('right');?>
+				<?php
+				    if ($sidebar == 'right' || $sidebar == 'both'){ 
+				        get_sidebar('right');
+				       }
+				?>
 			</div>
 		</div>
 	</section>
