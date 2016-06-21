@@ -610,6 +610,9 @@ section {
 .logo-menu .main-menu .navbar-default .navbar-nav > .active > a:focus {
   background: #<?php echo $theme_color; ?>;
   color: #fff; }
+
+.logo-menu .main-menu .navbar-default .navbar-nav > .active > a:hover {
+  color: #555; }
 .logo-menu .main-menu .nav > li {
   padding: 0 15px; }
 .logo-menu .main-menu .dropdown-menu > li > a {
