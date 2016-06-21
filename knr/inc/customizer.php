@@ -30,6 +30,11 @@ function knr_customizer_register( $wp_customize )
         'description' => __( 'Welcome to KnR Theme Option.', 'knr' ),
       ));
 
+      
+        // Remove the core header textcolor control, as it shares the sidebar text color.
+        $wp_customize->remove_control( 'header_textcolor' );
+
+
       /**********************************************/
       /*************** LOGO SECTION *****************/
       /**********************************************/     
