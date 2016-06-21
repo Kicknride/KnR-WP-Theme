@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-	<section class="page-header" style="background:#404040 url( <?php if ( get_header_image() ) { header_image(); }  ?>); background-size: cover;">	
+	<section class="page-header" style="background:#c8c8c8 url( <?php if ( get_header_image() ) { header_image(); }  ?>); background-size: cover;">	
 	    <div class="container">
 	        <div class="row">
 	            <div class="col-sm-12">
