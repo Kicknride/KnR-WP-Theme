@@ -34,6 +34,19 @@ function knr_customizer_register( $wp_customize )
         // Remove the core header textcolor control, as it shares the sidebar text color.
         $wp_customize->remove_control( 'header_textcolor' );
 
+	// Add global theme color setting and control.
+	$wp_customize->add_setting( 'knr_global_color', array(
+		'default'           => '#cc3300',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'knr_global_color', array(
+		'label'       => __( 'Global Theme Color', 'knr' ),
+		'description' => __( 'Applied to the global theme.', 'knr' ),
+		'section'     => 'colors',
+	) ) );
+
 
       /**********************************************/
       /*************** LOGO SECTION *****************/
