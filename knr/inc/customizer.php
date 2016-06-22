@@ -38,7 +38,7 @@ function knr_customizer_register( $wp_customize )
 	$wp_customize->add_setting( 'knr_global_color', array(
 		'default'           => '#cc3300',
 		'sanitize_callback' => 'sanitize_hex_color',
-		'transport'         => 'postMessage',
+		'transport'         => 'refresh',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'knr_global_color', array(
@@ -848,3 +848,533 @@ function knr_sanitize_category($input){
   return $output;
 
 }
+
+function knr_customize_css()
+{
+    ?>
+         <style type="text/css">
+
+a, a:link, a:focus, a:link, a:visited, a:active {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+code {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+.btn-theme {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.theme-color {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+.theme-bg {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+.form-control:focus {
+	border-color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+
+
+/*----------Section Title----------*/
+.section-title .underline {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+	}
+
+
+/*----------Animation on dropdown-----------*/
+mark {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+.elements .single .underline {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*----------------Smart Menu-------------*/
+/*
+ You probably do not need to edit this at all.
+
+ Add some SmartMenus required styles not covered in Bootstrap 3's default CSS.
+ These are theme independent and should work with any Bootstrap 3 theme mod.
+*/
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+	background-color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?> ;
+}
+
+/*----------Logo-----Menu-----*/
+ .logo a, .logo a:hover {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+.logo-menu .main-menu .navbar-nav > li > a:hover {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+.logo-menu .main-menu .navbar-default .navbar-nav > .active > a, 
+.logo-menu .main-menu .navbar-default .navbar-nav > .active > a:hover, 
+.logo-menu .main-menu .navbar-default .navbar-nav > .active > a:focus {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+.logo-menu .main-menu .dropdown-menu {
+	border-top: 4px solid <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.logo-menu .main-menu .dropdown-menu:before {
+	border-bottom: 10px solid <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.logo-menu .main-menu .dropdown-menu > li > a:hover {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+/*--------Sticky------*/
+.logo-menu.sticky-menu {
+	border-bottom: 4px solid <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+
+.page-numbers .current{
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?> none repeat scroll 0 0;
+	border-color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+li a, li a:hover {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+
+.dropdown-menu > .active > a, 
+.dropdown-menu > .active > a:hover, 
+.dropdown-menu > .active > a:focus {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?> !important;
+}
+
+
+
+/*--------------------------------------------------------------
+## Asides
+--------------------------------------------------------------*/
+aside.sidebar .single .title:after {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?> none repeat scroll 0% 0%;
+}
+aside.sidebar .single .search .btn {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+	border-color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+aside.sidebar .single .underline {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+aside.sidebar .single ul li a:hover {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+aside.sidebar .single .tagcloud a:hover {
+	color:<?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+
+.single-page .comment .name {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+.single-page .comment .reply-btn {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+.fn, .fn a, .says, time {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.comment-reply-link {    
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.comment-reply-link:hover {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+/*-------------Scroll to top--------------*/
+.scroll-top-wrapper {
+	background-color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+
+/*--Selection-------*/
+::-moz-selection {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+::selection {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+
+
+
+/*--------------------------------------------------------------
+## FOOTER
+--------------------------------------------------------------*/
+footer .single .single-title {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+footer .single li a:hover {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+footer .single address i {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+footer .copyright .social-media li a {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+footer .copyright .social-media li a:hover {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+
+/*--------------------------------------------------------------
+## FULL WIDTH SLIDER
+--------------------------------------------------------------*/
+.carousel-caption .buttons .btn {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.carousel-caption .buttons .btn-slider1 {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+
+
+/*--------------------------------------------------------------
+## SLIDER
+--------------------------------------------------------------*/
+.carousel-indicators .active {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+
+
+/*--------------------------------------------------------------
+## INTRO
+--------------------------------------------------------------*/
+.intro {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+.intro .single .read-more {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+
+
+/*--------------------------------------------------------------
+## SERVICES
+--------------------------------------------------------------*/
+.services .single .content .read-more {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+.services .single .content .read-more:hover {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+
+
+/*--------------------------------------------------------------
+## TESTIMONIAL
+--------------------------------------------------------------*/
+.testimonials .section-title h3 {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+.testimonials .client-info h3 {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.testimonials .client-info p {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+.testimonials .owl-theme .owl-controls .owl-page.active span {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+
+
+
+/*--------------------------------------------------------------
+## LATEST POST
+--------------------------------------------------------------*/
+.latest-post .single .content .read-more {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+	border: 1px solid <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.latest-post .single .content .read-more:hover {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+
+
+
+/*--------------------------------------------------------------
+## OUR WORKS
+--------------------------------------------------------------*/
+.our-works .single .underline {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.our-works .single .read-more {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+
+
+/*--------------------------------------------------------------
+## NEWSLETTER
+--------------------------------------------------------------*/
+.newsletter {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+
+/*--------------------------------------------------------------
+## THEME INNERPAGE CSS
+--------------------------------------------------------------*/
+.page-header .block .underline {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.page-header .block .bc li a {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.page-header .block .bc li a:hover {
+	border-color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+
+
+
+
+/*--------------------------------------------------------------
+## BLOG PAGE
+--------------------------------------------------------------*/
+.post-title a, .post-title a:hover {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.taxonomy-description > p {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.inner-content .single-post .read-more {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.inner-content .single-post .read-more:hover {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?> none repeat scroll 0 0;
+}
+
+
+
+/*--------------------------------------------------------------
+## CONTACT PAGE
+--------------------------------------------------------------*/
+.wpcf7-submit {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+
+
+/*--------------------------------------------------------------
+## PAGE NOT FOUND
+--------------------------------------------------------------*/
+.not-found h1 {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+
+
+
+/*--------------------------------------------------------------
+## SINGLE POST
+--------------------------------------------------------------*/
+.single-page .post-info a:hover {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+.single-page blockquote {
+	border-top: 4px solid <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.single-page blockquote cite {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+.single-page .social-media li a {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.single-page .pager li > a, .single-page .pager li > span {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+
+.pagination ul li a {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.pagination ul li.active a {
+	background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+	border-color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+.content h1 {
+	border-top: 3px solid <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+
+.content blockquote.sommaire {
+    font-style: normal;
+    padding-left: 50px;
+    border: none;
+    background: rgba(204, 51, 0, 0.025);
+    padding-bottom: 0.001em;
+    border-radius: 4px 4px 4px 4px; 
+
+}
+
+
+
+/*--------------------------------------------------------------
+## WOO COMMERCE EXTRA CSS
+--------------------------------------------------------------*/
+.woocommerce .woocommerce-breadcrumb a{ 
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+.woocommerce ul.products li.product h3 {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.woocommerce .star-rating::before,
+.woocommerce .products .star-rating,
+.woocommerce ul.products li.product .price{
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+.woocommerce #respond input#submit, 
+.woocommerce a.button, .woocommerce button.button, 
+.woocommerce input.button {
+	background-color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+
+/*Woo-commerce Single Page*/
+.woocommerce div.product .product_title {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+.woocommerce .star-rating span {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.woocommerce-review-link {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.woocommerce div.product p.price ins, 
+.woocommerce div.product span.price ins {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.woocommerce div.product p.price, 
+.woocommerce div.product span.price {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+.product_meta .posted_in a {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+
+#tab-description h2{
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+.woocommerce #reviews h3{
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+.woocommerce #respond input#submit.alt, 
+.woocommerce a.button.alt, 
+.woocommerce button.button.alt, 
+.woocommerce input.button.alt{
+	background-color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.woocommerce #respond input#submit.alt:hover, 
+.woocommerce a.button.alt:hover, 
+.woocommerce button.button.alt:hover, 
+.woocommerce input.button.alt:hover{
+	background-color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?> !important;
+}
+
+
+.woocommerce #reviews #comments h2 {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.woocommerce p.stars a.star-1::after, 
+.woocommerce p.stars a.star-2::after, 
+.woocommerce p.stars a.star-3::after, 
+.woocommerce p.stars a.star-4::after, 
+.woocommerce p.stars a.star-5::after{
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+.related.products > h2 {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+.product-name > a{
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+.product-name > a:hover{
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+.cross-sells > h2 {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+/*Woo-Commerce Cart Page*/
+.woocommerce .woocommerce-info {
+	border-top-color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.woocommerce .woocommerce-info::before{
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.showlogin, .showlogin:hover{
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.showcoupon, .showcoupon:hover{
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.lost_password a, .lost_password a:hover{
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+.woocommerce-billing-fields h3{
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+
+.woocommerce-shipping-fields h3{
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+#order_review_heading{
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+}
+
+.order_details {
+	border: 1px solid <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.woocommerce > h2 {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+header > h2 {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+.title > h3 {
+	color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+}
+
+@media (max-width: 767px) {
+	.navbar-default .navbar-toggle {
+		border-color: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>;
+	}
+	.navbar-default .navbar-toggle .icon-bar {
+		background: <?php echo get_theme_mod('knr_global_color', '#cc3300'); ?>; 
+	}
+}
+
+
+         </style>
+    <?php
+}
+add_action( 'wp_head', 'knr_customize_css');
