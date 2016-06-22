@@ -43,7 +43,7 @@ get_header(); ?>
 	            );
 	            $loop = new WP_Query($args);
 
-	          
+                    $slider_num = 0;
 	            if ($loop->have_posts()) :  while ($loop->have_posts()) : $loop->the_post();
                         $slider_num = $slider_num +1;
 	          ?>

@@ -2,7 +2,10 @@ Changelog
 
 Tested up to: 4.5
 
-Version 1.0
+Version 1.2
+i)      Add $slider_num init
+
+Version 1.1
 i)      Add readme.txt
 
 Version 1.0
