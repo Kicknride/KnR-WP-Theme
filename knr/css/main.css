@@ -1612,7 +1612,7 @@ html, body {height: 100%; }
   border: 1px solid transparent;
   transition: all 0.4s ease-in-out; }
 .inner-content .single-post:hover {border: 1px solid #f0f0f0; }
-.inner-content .single-post .post-title {font-size: 20px; }
+.inner-content .single-post .post-title {font-size: 20px; -ms-word-wrap: break-word; word-wrap: break-word;}
 .post-title a, .post-title a:hover {color: #cc3300;}
 .taxonomy-description > p {color: #cc3300;}
 .inner-content .single-post .post-info {color: #999; text-transform: uppercase; }

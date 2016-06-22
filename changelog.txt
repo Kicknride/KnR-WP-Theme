@@ -2,6 +2,9 @@ Changelog
 
 Tested up to: 4.5
 
+Version 1.3
+i)      Correct long word wrap on title
+
 Version 1.2
 i)      Add $slider_num init
 
