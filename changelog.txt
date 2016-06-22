@@ -3,6 +3,9 @@ Changelog
 Tested up to: 4.5
 
 Version 1.0
+i)      Add readme.txt
+
+Version 1.0
 i)      Add Global Theme Color choice in theme option
 
 Version 0.0.5
