@@ -336,6 +336,26 @@ get_header(); ?>
 	                        <h3 class="block-title"><?php the_title();?></h3>
 							<?php the_excerpt();?>
 	                        <a href="<?php the_permalink();?>" class="btn read-more" title=""><?php _e('Read More', 'knr');?></a>
+	                    	<div class="post-info">
+            <span class="pull-right"><?php
+            include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+            if (is_plugin_active('wp-statistics/wp-statistics.php')){
+                if (wp_statistics_pages('total', '', get_the_ID ()) > 0){
+                    printf(
+                                        /* translators: 1: number of views */
+                                                _n(
+                                                        '%1$s Reading',
+                                                        '%1$s Readings',
+                                                        wp_statistics_pages('total', '', get_the_ID ()),
+                                                        'knr'
+                                                ),
+                                                number_format_i18n(wp_statistics_pages('total', '', get_the_ID ())) 
+
+                                        );
+                }
+            }
+           ?></span>
+	                    	</div>
 	                    </div>
 	                </div>
 	            </div>
