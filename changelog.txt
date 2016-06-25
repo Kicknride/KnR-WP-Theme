@@ -2,6 +2,9 @@ Changelog
 
 Tested up to: 4.5
 
+Version 1.4
+i)      Add Reading numbers
+
 Version 1.3
 i)      Correct long word wrap on title
 

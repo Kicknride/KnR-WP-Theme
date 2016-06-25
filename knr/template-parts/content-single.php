@@ -30,6 +30,22 @@
             <span class="pull-left"><?php echo esc_attr( get_the_date('M d Y') );?> <?php _e('- POSTED BY','knr'); ?> <?php echo esc_html( get_the_author_meta('display_name') );?></span>
             
             <span class="pull-right"><i class="fa fa-tags"></i> <?php the_tags(); ?> &nbsp;<i class="fa fa-comments"></i> <?php comments_popup_link(__('zero comment','knr'),__('one comment','knr'), __('% comments','knr'));?></span>
+            <span class="pull-left"><?php
+            if (wp_statistics_pages('total', '', get_the_ID ()) > 0){
+            printf(
+				/* translators: 1: number of views */
+					_n(
+						'%1$s Reading',
+						'%1$s Readings',
+						wp_statistics_pages('total', '', get_the_ID ()),
+						'knr'
+					),
+					number_format_i18n(wp_statistics_pages('total', '', get_the_ID ())) 
+                                               
+				);
+            }
+            
+            ?></span>
         </div>
 
         <div class="clearfix"></div>

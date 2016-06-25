@@ -52,6 +52,14 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
+#. translators: 1: number of views
+#: content.php:33 content-single.php:38
+#, php-format
+msgid "%1$s Reading"
+msgid_plural "%1$s Readings"
+msgstr[0] ""
+msgstr[1] ""
+
 #. Are there comments to navigate through?
 #: comments.php:53
 msgid "Comment navigation"
@@ -529,6 +537,7 @@ msgctxt "Categories list"
 msgid "Posted in %1$s"
 msgid_plural "Posted in %1$s"
 msgstr[0] ""
+msgstr[1] ""
 
 #. translators: 1: number of comments
 #: inc/template-tags.php:58
@@ -536,6 +545,7 @@ msgctxt "Tags list"
 msgid "Tagged %1$s"
 msgid_plural "Tagged %1$s"
 msgstr[0] ""
+msgstr[1] ""
 
 #: inc/template-tags.php:64
 msgid "Leave a comment"
