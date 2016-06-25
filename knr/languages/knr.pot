@@ -271,6 +271,14 @@ msgstr ""
 msgid "Welcome to KnR Theme Option."
 msgstr ""
 
+#: inc/customizer.php:45
+msgid "Global Theme Color"
+msgstr ""
+
+#: inc/customizer.php:46
+msgid "Applied to the global theme."
+msgstr ""
+
 #: inc/customizer.php:62
 msgid "Slider Categories"
 msgstr ""
