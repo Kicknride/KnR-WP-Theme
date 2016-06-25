@@ -205,10 +205,12 @@ msgid "Search Results for: %s"
 msgstr ""
 
 #: searchform.php:4
+msgctxt "placeholder"
 msgid "Search this blog"
 msgstr ""
 
 #: searchform.php:4
+msgctxt "label"
 msgid "Search for:"
 msgstr ""
 
