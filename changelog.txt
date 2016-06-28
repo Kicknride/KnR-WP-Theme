@@ -2,6 +2,9 @@ Changelog
 
 Tested up to: 4.5
 
+Version 1.5
+i)      Correct some translations context
+
 Version 1.4
 i)      Add Reading numbers
 
